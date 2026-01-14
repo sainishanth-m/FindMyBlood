@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find My Blood | Built By M.Sai Nishanth</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Onest:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/fab.css">
+    <link rel="stylesheet" href="css/styles-cities.css">
+
+    <link rel="stylesheet" href="css/text-animate.css">
+    <link rel="stylesheet" href="css/mobile-layout.css">
+
+
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar-no-shadow">
+        <div class="navbar-no-shadow-container">
+            <div class="container-regular">
+                <div class="navbar-wrapper">
+                    <a href="#" class="navbar-brand" aria-label="home">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            <path d="M11 7.5c0 0-3 3.5-3 5C8 14 9.3 15 11 15s3-1 3-2.5c0-1.5-3-5-3-5z"
+                                fill="currentColor" stroke="none" />
+                        </svg>
+                        <span>FindMyBlood</span>
+                    </a>
+                    <nav role="navigation" class="nav-menu-wrapper">
+                        <ul role="list" class="nav-menu">
+                            <li class="list-item"><a href="#" class="nav-link">Home</a></li>
+                            <li><a href="#faq" class="nav-link">FAQ's</a></li>
+                            <li><a href="cities.html" class="nav-link">Cities</a></li>
+                            <li><a href="need-blood.html" class="nav-link">NeedBlood</a></li>
+                            <li><a href="donate.html" class="nav-link">Donate</a></li>
+                            <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                            <li class="mobile-margin-top-10">
+                                <div class="nav-button-wrapper">
+                                    <a href="donate.html" class="button-primary">SIGN UP</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="menu-button" id="menuToggle" aria-label="menu" role="button" tabindex="0">
+                        <div class="w-icon-nav-menu">☰</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="section section-white mobile-section hero-mobile">
+        <!-- Content Part (Text First) -->
+        <div class="section-content">
+            <h1 class="heading cstm_heading">Find Your Match, Give Hope</h1>
+            <p class="text-block text-block-flex text-block-opacity-70">Connect with compatible blood
+                donors and recipients. Fast. Secure. Life-Saving.</p>
+
+            <div class="hero-buttons">
+                <a href="need-blood.html" class="button primary w-button">Find Donors</a>
+                <a href="donate.html" class="button-outline secondary w-button">Become a Donor</a>
+            </div>
+
+            <p class="hero-credit">Built By <a href="https://sainishanth.online" target="_blank"
+                    rel="noopener noreferrer" class="hero-credit-link">M.Sai Nishanth</a></p>
+        </div>
+
+        <!-- Media Part (Video Second) -->
+        <div class="section-media">
+            <video class="hero-video" autoplay muted loop playsinline preload="metadata" loading="lazy">
+                <source src="assets/videos/hero-section-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- Desktop Layout (hidden on mobile) -->
+        <div class="w-layout-blockcontainer container-regular w-container">
+            <div class="div-block">
+                <div class="w-layout-grid grid hero-grid">
+                    <div id="w-node-hero-content" class="w-layout-vflex flex-block flex-block-center-on-mobile">
+                        <h1 class="heading cstm_heading">Find Your Match,<span> Give Hope</span></h1>
+                        <div class="text-block text-block-flex text-block-opacity-70">Connect with compatible blood
+                            donors and recipients.<span> Fast. Secure. Life-Saving.</span></div>
+                        <p class="hero-credit">Built By <a href="https://sainishanth.online" target="_blank"
+                                rel="noopener noreferrer" class="hero-credit-link">M.Sai Nishanth</a></p>
+                        <div class="w-layout-hflex flex-block-2">
+                            <a href="need-blood.html" class="button w-button">Find Donors</a>
+                            <a href="donate.html" class="button button-outline w-button">Become a Donor</a>
+                        </div>
+                    </div>
+                    <div class="w-layout-vflex flex-block-4">
+                        <a href="#findmyblood-platform" class="scroll-down-link w-inline-block">
+                            <div class="scroll-indicator">
+                                <span class="scroll-text">Scroll Down</span>
+                                <div class="scroll-arrow">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="w-layout-vflex flex-block-3">
+                        <div class="hero-video-wrapper">
+                            <video class="hero-video" autoplay muted loop playsinline preload="metadata" loading="lazy">
+                                <source src="assets/videos/hero-section-video.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </section>
+
+
+    <!-- The FindMyBlood Platform Section -->
+    <section id="findmyblood-platform" class="section healthcare-section mobile-section">
+        <!-- Media Part (Video) -->
+        <div class="section-media">
+            <video autoplay muted playsinline loop data-object-fit="cover">
+                <source src="assets/videos/second-section-video.mp4">
+            </video>
+        </div>
+
+        <!-- Content Part -->
+        <div class="section-content">
+            <h2 class="heading healthcare-heading animate-fade-up">Connecting Patients and Blood Donors in Real Time
+            </h2>
+            <p class="text-block-4 healthcare-text animate-fade-up animate-delay-2">A simple, location-based
+                platform designed to reduce response time during medical emergencies by helping patients find and
+                contact nearby blood
+                donors instantly.</p>
+        </div>
+
+        <!-- Desktop Layout -->
+        <div class="background-video-2 w-background-video w-background-video-atom"><video
+                id="cafa0272-7fbf-71f6-512c-10181c942e01-video" autoplay="" muted="" playsinline=""
+                data-wf-ignore="true" data-object-fit="cover">
+                <source src="assets/videos/second-section-video.mp4" data-wf-ignore="true">
+            </video></div>
+        <div class="w-layout-blockcontainer container-regular w-container">
+            <div class="div-block div-block-center">
+                <div class="w-layout-vflex flex-block flex-block-max-width-550px">
+                    <h1 class="heading healthcare-heading animate-fade-up">Connecting Patients and Blood Donors in Real
+                        Time</h1>
+                    <div class="text-block-4 healthcare-text animate-fade-up animate-delay-2">A simple, location-based
+                        platform designed to reduce
+                        response time during medical emergencies by helping patients find and contact nearby blood
+                        donors instantly.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- System Fails Section -->
+    <section id="system-fails" class="section mobile-section">
+        <!-- Media Part (Video) -->
+        <div class="section-media">
+            <video autoplay loop muted playsinline data-object-fit="cover">
+                <source src="assets/videos/third section video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- Content Part -->
+        <div class="section-content">
+            <h2 class="heading animate-fade-up">The Problem Isn't Willing Donors—It's Slow Systems</h2>
+            <p class="text-block-4 text-block-4-opacity-70 animate-fade-up animate-delay-2">
+                Blood donors are ready to help, but patients struggle to find them quickly due to fragmented
+                information and lack of real-time availability. In emergencies, these delays can cost lives.
+            </p>
+        </div>
+
+        <!-- Desktop Layout -->
+        <div class="background-video-2 w-background-video w-background-video-atom"><video
+                id="16ecfd28-46ab-0208-7737-bc3fc5d0e92d-video" autoplay="" loop="" muted="" playsinline=""
+                data-wf-ignore="true" data-object-fit="cover">
+                <source src="assets/videos/third section video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video></div>
+        <div class="w-layout-blockcontainer container-regular container-regular-absolute w-container">
+            <div class="div-block div-block-bottom">
+                <div class="w-layout-vflex flex-block flex-block-max-width-750px">
+
+                    <h1 class="heading animate-fade-up">
+                        The Problem Isn’t Willing Donors—It’s Slow Systems</h1>
+                    <div class="text-block-4 text-block-4-opacity-70 animate-fade-up animate-delay-2">
+                        Blood donors are ready to help, but patients struggle to find them quickly due to fragmented
+                        information and lack of real-time availability. In emergencies, these delays can cost lives.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution 2 Section -->
+    <section class="section section-900px mobile-section">
+        <!-- Media Part (Video) -->
+        <div class="section-media">
+            <video autoplay loop muted playsinline data-object-fit="cover">
+                <source src="assets/videos/fourth section video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- Content Part -->
+        <div class="section-content">
+            <div class="text-block-5 animate-fade-left">The Solution</div>
+            <h2 class="heading animate-fade-left animate-delay-1">So We Built FindMyBlood</h2>
+            <p class="text-block-4 animate-fade-left animate-delay-2">
+                FindMyBlood puts patients back in control during medical emergencies. <br><br>
+                With real-time location matching, live donor availability, and direct contact, patients can
+                quickly find nearby blood donors—without delays, confusion, or middlemen.</p>
+        </div>
+
+        <!-- Desktop Layout -->
+        <div class="background-video-2 w-background-video w-background-video-atom"><video
+                id="c4078842-60d4-2264-620f-4e73dd96bf41-video" autoplay="" loop="" muted="" playsinline=""
+                data-wf-ignore="true" data-object-fit="cover">
+                <source src="assets/videos/fourth section video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video></div>
+        <div class="w-layout-blockcontainer container-regular w-container">
+            <div class="div-block">
+                <div class="w-layout-vflex flex-block flex-block-max-width-550px flex-block-left">
+                    <div class="text-block-5 animate-fade-left">The Solution</div>
+                    <h1 class="heading animate-fade-left animate-delay-1">
+                        So We Built FindMyBlood</h1>
+                    <div class="text-block-4 animate-fade-left animate-delay-2">
+                        FindMyBlood puts patients back in control during medical emergencies. <br><br>
+                        With real-time location matching, live donor availability, and direct contact, patients can
+                        quickly find nearby blood donors—without delays, confusion, or middlemen.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- FAQ Section -->
+
+    <!-- FAQ Section -->
+    <!-- Premium FAQ Section -->
+    <section id="faq" class="faq-section">
+        <div class="faq-container text-container">
+            <div class="faq-layout">
+                <div class="faq-header-side">
+                    <h2 class="faq-title animate-fade-right">Frequently<br>Asked<br>Questions</h2>
+                </div>
+                <div class="faq-list">
+                    <!-- Item 1 -->
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span class="faq-q-text">Is my location shared all the time?</span>
+                            <span class="faq-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="faq-answer" aria-hidden="true">
+                            <div class="faq-answer-inner">
+                                <p>No. Your location is never shared continuously. A donor’s location becomes visible
+                                    only when they manually turn on their status as an “Active Donor.” This means donors
+                                    have complete control over when they appear on the map. As soon as a donor switches
+                                    their status to inactive, their location is immediately hidden. This ensures privacy
+                                    for donors and accuracy for patients, so you only see people who are genuinely
+                                    available to help at that moment.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span class="faq-q-text">How do patients contact me?</span>
+                            <span class="faq-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="faq-answer" aria-hidden="true">
+                            <div class="faq-answer-inner">
+                                <p>Once a suitable donor is found, patients can contact them directly through the app
+                                    using the provided call or in-app communication options. This allows patients to
+                                    quickly explain the emergency, confirm availability, and coordinate hospital details
+                                    without delays. The contact process is kept simple and direct so that critical time
+                                    is not wasted during urgent situations.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span class="faq-q-text">Is there a cost to use FindMyBlood?</span>
+                            <span class="faq-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="faq-answer" aria-hidden="true">
+                            <div class="faq-answer-inner">
+                                <p>No. FindMyBlood is completely free for both patients and donors. There are no
+                                    subscription fees, hidden charges, or commissions involved. The platform was built
+                                    with the sole purpose of helping people find blood quickly during emergencies, and
+                                    we believe that saving lives should never depend on money.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span class="faq-q-text">Who is eligible to be a donor?</span>
+                            <span class="faq-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="faq-answer" aria-hidden="true">
+                            <div class="faq-answer-inner">
+                                <p>Generally, anyone between 18 and 65 years of age who meets local health guidelines
+                                    can register as a donor on the platform. Donors are encouraged to be honest about
+                                    their health and availability. Final eligibility for blood donation is always
+                                    determined by the hospital or blood bank, and patients should rely on hospital
+                                    screening for medical confirmation before donation.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span class="faq-q-text">How does real-time matching work?</span>
+                            <span class="faq-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="faq-answer" aria-hidden="true">
+                            <div class="faq-answer-inner">
+                                <p>FindMyBlood uses real-time technology to help patients locate the nearest available
+                                    donors as quickly as possible. The system identifies active donors based on blood
+                                    group and location and updates results instantly. This reduces the time spent
+                                    searching manually and helps patients connect with nearby donors without delays,
+                                    which can be crucial in emergency situations.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 6 -->
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span class="faq-q-text">What if I can’t donate right now?</span>
+                            <span class="faq-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="faq-answer" aria-hidden="true">
+                            <div class="faq-answer-inner">
+                                <p>If a donor is unavailable to donate at a particular time, they can simply change
+                                    their status to inactive. Once this is done, they will no longer appear in patient
+                                    search results. This ensures that patients only see donors who are currently willing
+                                    and able to help, reducing confusion and unanswered calls during emergencies.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 7 -->
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span class="faq-q-text">How do I know the donor information is accurate?</span>
+                            <span class="faq-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="faq-answer" aria-hidden="true">
+                            <div class="faq-answer-inner">
+                                <p>Donors are encouraged to keep their profiles updated with correct blood group details
+                                    and availability. While FindMyBlood provides a fast connection between patients and
+                                    donors, patients are advised to verify identity and blood group at the hospital.
+                                    Medical verification and screening are always handled by healthcare professionals to
+                                    ensure safety.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 8 -->
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span class="faq-q-text">Is my data secure on FindMyBlood?</span>
+                            <span class="faq-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="faq-answer" aria-hidden="true">
+                            <div class="faq-answer-inner">
+                                <p>Yes. Data security is taken very seriously. Personal information is protected using
+                                    secure storage and encryption methods. Contact details are shared only when a donor
+                                    agrees to be contacted, and information is never misused or shared for non-medical
+                                    purposes. The platform is designed to keep both patients and donors safe and
+                                    protected.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 9 -->
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span class="faq-q-text">What should I do if a donor doesn’t respond?</span>
+                            <span class="faq-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="faq-answer" aria-hidden="true">
+                            <div class="faq-answer-inner">
+                                <p>If a donor does not respond, patients can immediately contact another nearby donor
+                                    shown on the map. Since multiple donors are displayed in real time, you are not
+                                    dependent on just one person. This increases the chances of finding help quickly
+                                    without unnecessary waiting.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 10 -->
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span class="faq-q-text">Can I report a fake profile or misuse?</span>
+                            <span class="faq-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="faq-answer" aria-hidden="true">
+                            <div class="faq-answer-inner">
+                                <p>Yes. If you come across any suspicious activity, incorrect information, or misuse of
+                                    the platform, you can report it directly. Our team reviews such reports carefully
+                                    and takes appropriate action to maintain a safe and trustworthy environment for
+                                    everyone using the platform.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <a href="index.html" class="footer-brand">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        <path d="M11 7.5c0 0-3 3.5-3 5C8 14 9.3 15 11 15s3-1 3-2.5c0-1.5-3-5-3-5z" fill="currentColor"
+                            stroke="none" />
+                    </svg>
+                    <span>FindMyBlood</span>
+                </a>
+            </div>
+            <div class="footer-right">
+                <h3 class="footer-heading">About FindMyBlood</h3>
+                <p class="footer-description">FindMyBlood is a life-saving platform designed to instantly connect
+                    patients in need of blood with verified nearby donors. When every minute matters, FindMyBlood
+                    removes delays, confusion, and dependency on inefficient systems.</p>
+                <p class="footer-credit">Built By <a href="https://sainishanth.online" target="_blank"
+                        rel="noopener noreferrer" class="footer-credit-link">M.Sai Nishanth</a></p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- Mobile Menu Panel -->
+    <div class="mobile-menu-panel" id="mobileMenu">
+        <nav class="menu-links">
+            <a href="index.html">Home</a>
+            <a href="#faq">FAQs</a>
+            <a href="cities.html">Cities</a>
+            <a href="need-blood.html">Need Blood</a>
+            <a href="donate.html">Donate</a>
+            <a href="dashboard.html">Dashboard</a>
+        </nav>
+        <a href="donate.html" class="menu-cta">Sign Up</a>
+    </div>
+
+    <!-- FAB Button -->
+    <div class="fab-container">
+        <button class="brutalist-fab" id="fab-trigger" aria-label="Open Command Palette">
+            <div class="fab-icon-wrapper">
+                <svg class="fab-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M15 6v12a3 3 0 1 0 3-3H6a3 3 0 1 0 3 3V6a3 3 0 1 0-3 3h12a3 3 0 1 0-3-3z" />
+                </svg>
+            </div>
+        </button>
+    </div>
+
+    <!-- Command Palette Backdrop -->
+    <div class="cmd-backdrop" id="cmd-backdrop">
+        <div class="cmd-container">
+            <div class="cmd-surface">
+                <!-- Input -->
+                <div class="cmd-input-wrapper">
+                    <svg class="cmd-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input type="text" class="cmd-input" id="cmd-input" placeholder="Type a command or search...">
+                    <span class="cmd-esc">esc</span>
+                </div>
+
+                <!-- List -->
+                <div class="cmd-list" id="cmd-list">
+
+                    <!-- Pages Group -->
+                    <div class="cmd-group">
+                        <div class="cmd-group-heading">Pages</div>
+
+                        <a href="index.html" class="cmd-item">
+                            <div class="cmd-item-left">
+                                <svg class="cmd-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                                </svg>
+                                <span>Home</span>
+                            </div>
+                            <span class="cmd-shortcut">H</span>
+                        </a>
+
+                        <a href="index.html#faq" class="cmd-item">
+                            <div class="cmd-item-left">
+                                <svg class="cmd-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                                </svg>
+                                <span>FAQ</span>
+                            </div>
+                            <span class="cmd-shortcut">Q</span>
+                        </a>
+
+                        <a href="need-blood.html" class="cmd-item selected">
+                            <!-- Pre-select one for visual demo? No, let hover handle it -->
+                            <div class="cmd-item-left">
+                                <svg class="cmd-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                </svg>
+                                <span>Find Donors</span>
+                            </div>
+                            <span class="cmd-shortcut">F</span>
+                        </a>
+
+                        <a href="donate.html" class="cmd-item">
+                            <div class="cmd-item-left">
+                                <svg class="cmd-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                    </path>
+                                </svg>
+                                <span>Donate</span>
+                            </div>
+                            <span class="cmd-shortcut">D</span>
+                        </a>
+
+                        <a href="dashboard.html" class="cmd-item">
+                            <div class="cmd-item-left">
+                                <svg class="cmd-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                    <line x1="3" y1="9" x2="21" y2="9"></line>
+                                    <line x1="9" y1="21" x2="9" y2="9"></line>
+                                </svg>
+                                <span>Dashboard</span>
+                            </div>
+                            <span class="cmd-shortcut">B</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/command-palette.js"></script>
+    <script src="js/text-animate.js"></script>
+    <script src="js/script.js"></script>
+
+    <!-- Video initialization safety script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const video = document.querySelector(".hero-video");
+            if (video) {
+                video.currentTime = 0;
+                video.play().catch(() => { });
+            }
+        });
+    </script>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        const menuBtn = document.getElementById("menuToggle");
+        const mobileMenu = document.getElementById("mobileMenu");
+
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener("click", () => {
+                mobileMenu.classList.toggle("open");
+            });
+
+            /* Close when clicking outside */
+            document.addEventListener("click", (e) => {
+                if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                    mobileMenu.classList.remove("open");
+                }
+            });
+
+            /* Close on link click */
+            document.querySelectorAll(".menu-links a, .menu-cta").forEach(link => {
+                link.addEventListener("click", () => {
+                    mobileMenu.classList.remove("open");
+                });
+            });
+        }
+    </script>
+</body>
+
+</html>

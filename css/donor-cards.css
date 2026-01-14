@@ -1,0 +1,366 @@
+/* =========================
+   DONOR CARD STYLES
+   Modern Medical-Grade UI
+========================= */
+
+/* Results Container */
+.need-blood-results {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Results Header */
+.need-blood-results h2 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 0.5rem;
+}
+
+/* Donors List Container */
+.donors-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    /* 20px breathing room between cards */
+}
+
+/* Individual Donor Card */
+.donor-card {
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: var(--card-shadow);
+    border: 1px solid var(--gray-200);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+/* Fade-in animation for cards */
+.donor-card.animate-fade-in {
+    animation: cardFadeIn 0.4s ease-out forwards;
+}
+
+@keyframes cardFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Card hover effect */
+.donor-card:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-2px);
+}
+
+/* Left Section: Avatar + Info */
+.card-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+}
+
+/* Circular Avatar */
+.avatar-circle {
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+    /* Prevent shrinking */
+    background-color: var(--gray-100);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray-500);
+}
+
+.avatar-circle svg {
+    width: 28px;
+    height: 28px;
+    stroke-width: 2;
+}
+
+/* Info Content Stack */
+.info-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    /* 8px between rows */
+}
+
+/* Donor Name */
+.donor-name {
+    font-size: 1.125rem;
+    /* 18px - slightly larger */
+    font-weight: 700;
+    color: var(--gray-900);
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* Info Row (Distance, Availability, Phone) */
+.info-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    /* 14px */
+    color: var(--gray-600);
+}
+
+.info-row svg {
+    width: 14px;
+    height: 14px;
+    color: var(--gray-500);
+    flex-shrink: 0;
+}
+
+.info-row span {
+    line-height: 1.4;
+}
+
+/* Availability Badge (Green Pill) */
+.status-badge {
+    background-color: var(--availability-green-bg);
+    color: var(--availability-green);
+    padding: 0.25rem 0.75rem;
+    /* 4px 12px */
+    border-radius: 9999px;
+    /* Full pill */
+    font-size: 0.75rem;
+    /* 12px */
+    font-weight: 600;
+    text-transform: capitalize;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Right Section: Blood Badge + Call Button */
+.card-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1rem;
+    /* Space between badge and button */
+}
+
+/* Blood Group Badge (Red Pill) */
+.blood-badge {
+    background-color: var(--blood-red);
+    color: #FFFFFF;
+    padding: 0.375rem 1rem;
+    /* 6px 16px */
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    /* 14px */
+    font-weight: 700;
+    letter-spacing: 0.025em;
+    min-width: 60px;
+    text-align: center;
+}
+
+/* Call Now Button */
+.btn-call-now {
+    background-color: var(--blood-red);
+    color: #FFFFFF;
+    padding: 0.625rem 1.5rem;
+    /* 10px 24px */
+    border-radius: 9999px;
+    /* Full pill */
+    font-size: 0.875rem;
+    /* 14px */
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    /* Space between icon and text */
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.btn-call-now svg {
+    width: 16px;
+    height: 16px;
+    stroke-width: 2;
+}
+
+.btn-call-now:hover {
+    background-color: var(--blood-red-hover);
+    transform: scale(1.05);
+    box-shadow: 0 4px 6px -1px rgba(220, 38, 38, 0.3);
+}
+
+.btn-call-now:active {
+    transform: scale(0.98);
+}
+
+/* Skeleton Loading Cards */
+.skeleton-card {
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: var(--card-shadow);
+    border: 1px solid var(--gray-200);
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.skeleton-avatar {
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+    background-color: var(--gray-200);
+    border-radius: 50%;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+.skeleton-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.skeleton-line {
+    height: 16px;
+    background-color: var(--gray-200);
+    border-radius: 4px;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+.skeleton-line.short {
+    width: 60%;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Responsive Design for Donor Cards */
+@media (max-width: 768px) {
+    .donor-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.25rem;
+        padding: 20px;
+    }
+
+    .card-left {
+        width: 100%;
+    }
+
+    .card-right {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .btn-call-now {
+        flex: 1;
+        justify-content: center;
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .donor-card {
+        padding: 16px;
+    }
+
+    .avatar-circle {
+        width: 48px;
+        height: 48px;
+        min-width: 48px;
+    }
+
+    .avatar-circle svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .donor-name {
+        font-size: 1rem;
+    }
+
+    .info-row {
+        font-size: 0.8125rem;
+    }
+
+    .card-right {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 0.75rem;
+    }
+
+    .btn-call-now {
+        width: 100%;
+        max-width: none;
+        justify-content: center;
+    }
+}
+
+/* Animations */
+.animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mb-8 {
+    margin-bottom: 2rem;
+}

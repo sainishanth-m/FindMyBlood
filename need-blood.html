@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Need Blood - FindMyBlood</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Onest:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/fab.css">
+
+</head>
+
+<body class="bg-background">
+    <!-- Navigation Bar -->
+    <nav class="navbar-no-shadow">
+        <div class="navbar-no-shadow-container">
+            <div class="container-regular">
+                <div class="navbar-wrapper">
+                    <a href="index.html" class="navbar-brand" aria-label="home">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            <path d="M11 7.5c0 0-3 3.5-3 5C8 14 9.3 15 11 15s3-1 3-2.5c0-1.5-3-5-3-5z"
+                                fill="currentColor" stroke="none" />
+                        </svg>
+                        <span>FindMyBlood</span>
+                    </a>
+                    <nav role="navigation" class="nav-menu-wrapper">
+                        <ul role="list" class="nav-menu">
+                            <li class="list-item"><a href="index.html" class="nav-link">Home</a></li>
+                            <li><a href="index.html#faq" class="nav-link">FAQ's</a></li>
+                            <li><a href="cities.html" class="nav-link">Cities</a></li>
+                            <li><a href="need-blood.html" class="nav-link">NeedBlood</a></li>
+                            <li><a href="donate.html" class="nav-link">Donate</a></li>
+                            <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                            <li class="mobile-margin-top-10">
+                                <div class="nav-button-wrapper">
+                                    <a href="donate.html" class="button-primary">SIGN UP</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="menu-button" aria-label="menu" role="button" tabindex="0">
+                        <div class="w-icon-nav-menu">☰</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="section need-blood-section" style="padding-top: 140px; min-height: 100vh;">
+        <div class="w-layout-blockcontainer container-regular w-container">
+
+            <!-- Page Header -->
+            <div class="text-center mb-8 animate-fade-in">
+                <h1 style="font-size: 2.25rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-dark);">
+                    Find Blood Donors
+                </h1>
+            </div>
+
+            <div class="need-blood-grid">
+                <!-- Search Filters (Left Column) -->
+                <div class="need-blood-filters-card animate-fade-in-up">
+                    <h2 class="filters-heading">
+                        <svg class="h-5 w-5 text-primary"
+                            style="width: 1.25rem; height: 1.25rem; color: var(--primary-color);" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+                        </svg>
+                        Search Filters
+                    </h2>
+
+                    <form class="filters-form" id="search-form">
+                        <!-- Blood Group -->
+                        <div class="filter-group">
+                            <label for="blood-group" class="filter-label"
+                                style="display: flex; align-items: center; gap: 0.5rem;">
+                                <svg class="h-4 w-4 text-primary"
+                                    style="width: 1rem; height: 1rem; color: var(--primary-color);" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                                </svg>
+                                Blood Group
+                            </label>
+
+                            <!-- Custom Dropdown -->
+                            <div class="custom-dropdown" id="blood-group-dropdown">
+                                <input type="hidden" id="blood-group" name="blood-group" value="">
+                                <button type="button" class="dropdown-trigger" aria-haspopup="listbox"
+                                    aria-expanded="false">
+                                    <span class="dropdown-value">Select blood group</span>
+                                    <svg class="dropdown-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2">
+                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                    </svg>
+                                </button>
+                                <ul class="dropdown-menu" role="listbox">
+                                    <li class="dropdown-item" data-value="" role="option">Select blood group</li>
+                                    <li class="dropdown-item" data-value="A+" role="option">A+</li>
+                                    <li class="dropdown-item" data-value="A-" role="option">A-</li>
+                                    <li class="dropdown-item" data-value="B+" role="option">B+</li>
+                                    <li class="dropdown-item" data-value="B-" role="option">B-</li>
+                                    <li class="dropdown-item" data-value="AB+" role="option">AB+</li>
+                                    <li class="dropdown-item" data-value="AB-" role="option">AB-</li>
+                                    <li class="dropdown-item" data-value="O+" role="option">O+</li>
+                                    <li class="dropdown-item" data-value="O-" role="option">O-</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- City -->
+                        <div class="filter-group">
+                            <label for="city" class="filter-label"
+                                style="display: flex; align-items: center; gap: 0.5rem;">
+                                <svg class="h-4 w-4 text-primary"
+                                    style="width: 1rem; height: 1rem; color: var(--primary-color);" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                City / Location
+                            </label>
+
+                            <!-- Custom Dropdown -->
+                            <div class="custom-dropdown" id="city-dropdown">
+                                <input type="hidden" id="city" name="city" value="">
+                                <button type="button" class="dropdown-trigger" aria-haspopup="listbox"
+                                    aria-expanded="false">
+                                    <span class="dropdown-value">Select city</span>
+                                    <svg class="dropdown-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2">
+                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                    </svg>
+                                </button>
+                                <ul class="dropdown-menu" role="listbox">
+                                    <li class="dropdown-item" data-value="" role="option">Select city</li>
+                                    <li class="dropdown-item" data-value="Hyderabad" role="option">Hyderabad</li>
+                                    <li class="dropdown-item" data-value="Vizag" role="option">Vizag</li>
+                                    <li class="dropdown-item" data-value="Amaravathi" role="option">Amaravathi</li>
+                                    <li class="dropdown-item" data-value="Khammam" role="option">Khammam</li>
+                                    <li class="dropdown-item" data-value="Vijayawada" role="option">Vijayawada</li>
+                                    <li class="dropdown-item" data-value="Kurnool" role="option">Kurnool</li>
+                                    <li class="dropdown-item" data-value="Guntur" role="option">Guntur</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Radius -->
+                        <div class="filter-group">
+                            <div class="slider-header">
+                                <label for="radius" class="filter-label">Search Radius</label>
+                                <span class="slider-value" style="color: var(--primary-color); font-weight: 600;">25
+                                    km</span>
+                            </div>
+                            <input type="range" id="radius" name="radius" min="5" max="50" step="5" value="25"
+                                class="filter-slider">
+                        </div>
+
+                        <!-- Search Button -->
+                        <button type="submit" class="button search-button w-button" id="search-btn">
+                            <span class="btn-text"
+                                style="display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+                                <svg class="h-5 w-5" style="width: 1.25rem; height: 1.25rem;" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                </svg>
+                                Search Donors
+                            </span>
+                            <span class="btn-loader hidden"
+                                style="display: none; align-items: center; justify-content: center; gap: 0.5rem;">
+                                <div class="animate-spin"
+                                    style="height: 1.25rem; width: 1.25rem; border-width: 2px; border-color: rgba(255,255,255,0.3); border-top-color: white; border-radius: 9999px;">
+                                </div>
+                                Searching...
+                            </span>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Results (Right Column) -->
+                <div class="need-blood-results">
+
+                    <!-- Initial State (No Search Yet) -->
+                    <div id="initial-state" class="text-center py-16 animate-fade-in" style="padding: 4rem 0;">
+                        <h3
+                            style="font-size: 1.25rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">
+                            Search for Donors
+                        </h3>
+                        <p style="color: var(--text-light); max-width: 28rem; margin: 0 auto;">
+                            Use the filters on the left to search for blood donors.
+                            Select your required blood group and location to get started.
+                        </p>
+                    </div>
+
+                    <!-- Loading State (Hidden) -->
+                    <div id="loading-state" class="space-y-4 hidden">
+                        <div style="height: 1.5rem; width: 10rem; background-color: #f0f0f0; border-radius: 0.25rem; margin-bottom: 1rem;"
+                            class="animate-pulse"></div>
+                        <!-- Skeletons -->
+                        <div class="skeleton-card">
+                            <div class="skeleton-avatar"></div>
+                            <div class="skeleton-content">
+                                <div class="skeleton-line"></div>
+                                <div class="skeleton-line short"></div>
+                            </div>
+                        </div>
+                        <div class="skeleton-card">
+                            <div class="skeleton-avatar"></div>
+                            <div class="skeleton-content">
+                                <div class="skeleton-line"></div>
+                                <div class="skeleton-line short"></div>
+                            </div>
+                        </div>
+                        <div class="skeleton-card">
+                            <div class="skeleton-avatar"></div>
+                            <div class="skeleton-content">
+                                <div class="skeleton-line"></div>
+                                <div class="skeleton-line short"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Results Container (Hidden) -->
+                    <div id="results-container" class="hidden">
+                        <div class="animate-fade-in">
+                            <div
+                                style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem;">
+                                <h2 style="font-size: 1.25rem; font-weight: 600; color: var(--text-dark);">
+                                    <span id="donor-count">0</span> Donors Found
+                                </h2>
+                                <span id="active-filter-badge"
+                                    style="background-color: var(--primary-color); color: white; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 500;"
+                                    class="hidden">
+                                    A+
+                                </span>
+                            </div>
+
+                            <div id="donors-list" class="donors-list"
+                                style="max-height: 70vh; overflow-y: auto; padding-right: 0.5rem;">
+                                <!-- Donors injected here -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- No Results State (Hidden) -->
+                    <div id="no-results" class="text-center py-16 hidden">
+                        <h3
+                            style="font-size: 1.25rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">
+                            No Donors Found
+                        </h3>
+                        <p style="color: var(--text-light); max-width: 28rem; margin: 0 auto;">
+                            Try adjusting your search filters or increasing the search radius.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <a href="index.html" class="footer-brand">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        <path d="M11 7.5c0 0-3 3.5-3 5C8 14 9.3 15 11 15s3-1 3-2.5c0-1.5-3-5-3-5z" fill="currentColor"
+                            stroke="none" />
+                    </svg>
+                    <span>FindMyBlood</span>
+                </a>
+            </div>
+            <div class="footer-right">
+                <h3 class="footer-heading">About FindMyBlood</h3>
+                <p class="footer-description">FindMyBlood is a life-saving platform designed to instantly connect
+                    patients in need of blood with verified nearby donors. When every minute matters, FindMyBlood
+                    removes delays, confusion, and dependency on inefficient systems.</p>
+                <p class="footer-credit">Built By <a href="https://sainishanth.online" target="_blank"
+                        rel="noopener noreferrer" class="footer-credit-link">M.Sai Nishanth</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FAB Button -->
+    <div class="fab-container">
+        <button class="brutalist-fab" id="fab-trigger" aria-label="Open Command Palette">
+            <div class="fab-icon-wrapper">
+                <svg class="fab-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M15 6v12a3 3 0 1 0 3-3H6a3 3 0 1 0 3 3V6a3 3 0 1 0-3 3h12a3 3 0 1 0-3-3z" />
+                </svg>
+            </div>
+        </button>
+    </div>
+
+    <!-- Command Palette Backdrop -->
+    <div class="cmd-backdrop" id="cmd-backdrop">
+        <div class="cmd-container">
+            <div class="cmd-surface">
+                <!-- Input -->
+                <div class="cmd-input-wrapper">
+                    <svg class="cmd-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input type="text" class="cmd-input" id="cmd-input" placeholder="Type a command or search...">
+                    <span class="cmd-esc">esc</span>
+                </div>
+
+                <!-- List -->
+                <div class="cmd-list" id="cmd-list">
+
+                    <!-- Pages Group -->
+                    <div class="cmd-group">
+                        <div class="cmd-group-heading">Pages</div>
+
+                        <a href="index.html" class="cmd-item">
+                            <div class="cmd-item-left">
+                                <svg class="cmd-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                                </svg>
+                                <span>Home</span>
+                            </div>
+                            <span class="cmd-shortcut">H</span>
+                        </a>
+
+                        <a href="index.html#faq" class="cmd-item">
+                            <div class="cmd-item-left">
+                                <svg class="cmd-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                                </svg>
+                                <span>FAQ</span>
+                            </div>
+                            <span class="cmd-shortcut">Q</span>
+                        </a>
+
+                        <a href="need-blood.html" class="cmd-item selected">
+                            <!-- Pre-select one for visual demo? No, let hover handle it -->
+                            <div class="cmd-item-left">
+                                <svg class="cmd-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                </svg>
+                                <span>Find Donors</span>
+                            </div>
+                            <span class="cmd-shortcut">F</span>
+                        </a>
+
+                        <a href="donate.html" class="cmd-item">
+                            <div class="cmd-item-left">
+                                <svg class="cmd-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                    </path>
+                                </svg>
+                                <span>Donate</span>
+                            </div>
+                            <span class="cmd-shortcut">D</span>
+                        </a>
+
+                        <a href="dashboard.html" class="cmd-item">
+                            <div class="cmd-item-left">
+                                <svg class="cmd-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                    <line x1="3" y1="9" x2="21" y2="9"></line>
+                                    <line x1="9" y1="21" x2="9" y2="9"></line>
+                                </svg>
+                                <span>Dashboard</span>
+                            </div>
+                            <span class="cmd-shortcut">B</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/command-palette.js"></script>
+    <script src="data/mockDonors.js"></script>
+
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

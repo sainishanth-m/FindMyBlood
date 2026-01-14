@@ -1,0 +1,331 @@
+@media (max-width: 768px) {
+
+    body {
+        margin: 0;
+        background: #ffffff;
+    }
+
+    /* Hide desktop navigation menu on mobile */
+    .nav-menu-wrapper {
+        display: none !important;
+    }
+
+    /* Section container */
+    .mobile-section {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0;
+        /* Removed spacing between sections */
+    }
+
+    .mobile-section:last-child {
+        margin-bottom: 80px;
+    }
+
+    /* Media area (image/video) */
+    .section-media {
+        width: 100%;
+        height: 48vh;
+        min-height: 280px;
+        overflow: hidden;
+        position: relative;
+        background: #f3f4f6;
+    }
+
+    .section-media img,
+    .section-media video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    /* Hide section-media if it's empty (no content) */
+    .section-media:empty {
+        display: none;
+        height: 0;
+        min-height: 0;
+    }
+
+    /* Force video to stay in media container */
+    .hero-video {
+        position: relative;
+        z-index: 1;
+    }
+
+    /* Hero video section - adjusted height and positioning */
+    .hero-mobile .section-media {
+        height: 55vh;
+        min-height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #ffffff;
+        overflow: hidden;
+    }
+
+    .hero-mobile .section-media video {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        /* Show full video without cropping */
+        object-position: center;
+    }
+
+    /* Text area */
+    .section-content {
+        background: #ffffff;
+        padding: 28px 22px 0;
+        /* No bottom padding */
+        text-align: center;
+    }
+
+    .section-content h1,
+    .section-content h2 {
+        font-size: 30px;
+        line-height: 1.2;
+        font-weight: 800;
+        margin-bottom: 16px;
+        color: #0b1320;
+    }
+
+    .section-content p,
+    .section-content .text-block-4,
+    .section-content .healthcare-text {
+        font-size: 16px;
+        line-height: 1.65;
+        color: #4b5563;
+        margin-bottom: 0;
+        /* Removed bottom margin */
+    }
+
+    .section-content .text-block-5 {
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--primary-color);
+        margin-bottom: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .section-content small,
+    .section-content .hero-credit {
+        font-size: 13px;
+        color: #6b7280;
+        margin-top: 20px;
+        display: block;
+    }
+
+    /* Hero Section Specific */
+    .hero-mobile .section-content,
+    .hero-content {
+        padding: 220px 22px 40px;
+        /* Extra generous spacing above heading */
+    }
+
+    /* Hero Buttons - Side by Side */
+    .hero-buttons {
+        display: flex;
+        flex-direction: row;
+        /* Changed to row for side-by-side layout */
+        gap: 12px;
+        justify-content: center;
+        margin: 28px 0 20px;
+        width: 100%;
+    }
+
+    .hero-buttons .button,
+    .hero-buttons .btn-primary,
+    .hero-buttons .primary {
+        background: var(--primary-color);
+        color: #fff;
+        padding: 16px 28px;
+        border-radius: 12px;
+        border: none;
+        font-size: 15px;
+        font-weight: 600;
+        flex: 1;
+        /* Equal width buttons */
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+        max-width: 180px;
+    }
+
+    .hero-buttons .button-outline,
+    .hero-buttons .btn-outline,
+    .hero-buttons .secondary {
+        border: 2px solid var(--primary-color);
+        background: transparent;
+        color: var(--primary-color);
+        padding: 16px 28px;
+        border-radius: 12px;
+        font-size: 15px;
+        font-weight: 600;
+        flex: 1;
+        /* Equal width buttons */
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+        max-width: 180px;
+    }
+
+    /* Spacing System */
+    section {
+        scroll-margin-top: 80px;
+    }
+
+    /* Show mobile layout, hide desktop layout */
+    .mobile-section .section-media,
+    .mobile-section .section-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mobile-section .w-layout-blockcontainer,
+    .mobile-section .background-video-2,
+    .mobile-section .w-background-video {
+        display: none !important;
+    }
+
+    /* Hero specific - hide scroll indicator on mobile */
+    .hero-mobile .scroll-down-link,
+    .hero-mobile .flex-block-4 {
+        display: none;
+    }
+
+    /* FAQ Section - Keep existing structure */
+    .faq-section {
+        margin-bottom: 0 !important;
+        /* Removed spacing after FAQ */
+    }
+
+    /* Trusted By Section */
+    .trusted-section {
+        padding: 24px 22px;
+        background: #f9fafb;
+    }
+
+    /* --- REMOVE GAP BETWEEN SECTIONS --- */
+
+    /* Remove bottom margin/padding from solution section */
+    .solution-section,
+    #solution,
+    .section-solution,
+    .section-900px {
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    /* Remove top margin/padding from FAQ section */
+    .faq-section,
+    #faq {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+
+    /* Kill any empty media blocks height */
+    .section-media:empty {
+        display: none !important;
+        height: 0 !important;
+        min-height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Remove Webflow container spacing */
+    .w-layout-blockcontainer {
+        margin-bottom: 0 !important;
+    }
+
+    /* Prevent collapsed sections creating space */
+    .mobile-section {
+        margin-bottom: 0 !important;
+    }
+
+    /* Webflow section spacing fix */
+    .section {
+        padding-bottom: 0 !important;
+        margin-bottom: 0 !important;
+    }
+
+    .section.faq-section {
+        padding-top: 0 !important;
+    }
+
+    /* --- MOBILE MENU PANEL --- */
+    .mobile-menu-panel {
+        position: fixed;
+        top: 70px;
+        right: 16px;
+        width: 240px;
+        background: #ffffff;
+        border-radius: 16px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+        padding: 18px 16px;
+
+        opacity: 0;
+        transform: translateY(-10px) scale(0.98);
+        pointer-events: none;
+        transition: all 0.25s ease;
+
+        z-index: 2000;
+    }
+
+    .mobile-menu-panel.open {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        pointer-events: auto;
+    }
+
+    .menu-links {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        margin-bottom: 18px;
+    }
+
+    .menu-links a {
+        font-size: 15px;
+        font-weight: 600;
+        color: #0b1320;
+        text-decoration: none;
+        padding: 8px 12px;
+        border-radius: 8px;
+        transition: background 0.2s;
+        text-align: center !important;
+        /* Center the text */
+        display: block !important;
+        /* Make it block for centering to work */
+    }
+
+    .menu-links a:hover {
+        background: #f3f4f6;
+    }
+
+    .menu-cta {
+        display: block;
+        text-align: center;
+        background: var(--primary-color);
+        color: #fff;
+        padding: 12px 0;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 15px;
+    }
+}
+
+/* Desktop - hide mobile layout */
+@media (min-width: 769px) {
+
+    .mobile-section .section-media,
+    .mobile-section .section-content {
+        display: none;
+    }
+
+    /* Hide mobile menu panel on desktop */
+    .mobile-menu-panel {
+        display: none !important;
+    }
+}

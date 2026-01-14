@@ -1,0 +1,211 @@
+/* Floating Animation */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.floating-image {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Layout for Cities Section */
+.cities-section {
+    background-color: #EDE6D6 !important;
+    /* Richer cream background */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 80px 20px;
+}
+
+.cities-layout {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    /* Left image, Center content, Right image */
+    align-items: center;
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.cities-left-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cities-center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.cities-heading {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 3rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.cities-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 500px;
+}
+
+.city-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.5rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.city-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.city-icon {
+    color: var(--primary-color);
+    flex-shrink: 0;
+}
+
+.city-badge span {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #2d3748;
+    font-family: 'Inter', sans-serif;
+}
+
+.cities-right-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Responsive considerations */
+@media (max-width: 1024px) {
+    .cities-layout {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .cities-left-image {
+        order: 1;
+    }
+
+    .cities-center-content {
+        order: 2;
+    }
+
+    .cities-right-image {
+        order: 3;
+    }
+
+    .floating-image {
+        max-width: 220px;
+    }
+
+    .cities-heading {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Mobile-optimized cities section */
+    .cities-section {
+        padding: 100px 20px 60px !important;
+        min-height: unset !important;
+        height: auto !important;
+    }
+
+    .cities-layout {
+        gap: 2rem;
+        min-height: unset !important;
+    }
+
+    .cities-center-content {
+        padding: 1rem 0;
+    }
+
+    .cities-heading {
+        font-size: 32px !important;
+        margin-bottom: 2rem !important;
+        font-weight: 800 !important;
+        line-height: 1.2 !important;
+    }
+
+    .cities-grid {
+        grid-template-columns: 1fr !important;
+        max-width: 100% !important;
+        gap: 12px !important;
+        margin-bottom: 2rem !important;
+    }
+
+    .city-badge {
+        padding: 14px 18px !important;
+        border-radius: 12px !important;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08) !important;
+        background: #ffffff !important;
+    }
+
+    .city-badge span {
+        font-size: 16px !important;
+        font-weight: 600 !important;
+    }
+
+    .city-icon {
+        width: 20px !important;
+        height: 20px !important;
+    }
+
+    .floating-image {
+        max-width: 200px !important;
+        animation: float 4s ease-in-out infinite !important;
+    }
+
+    /* Hide images on very small screens for cleaner look */
+    @media (max-width: 480px) {
+
+        .cities-left-image,
+        .cities-right-image {
+            display: none !important;
+        }
+
+        .cities-heading {
+            font-size: 28px !important;
+        }
+
+        .city-badge {
+            padding: 12px 16px !important;
+        }
+    }
+}

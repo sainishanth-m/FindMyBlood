@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Blood - FindMyBlood</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Onest:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/fab.css">
+
+
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar-no-shadow">
+        <div class="navbar-no-shadow-container">
+            <div class="container-regular">
+                <div class="navbar-wrapper">
+                    <a href="index.html" class="navbar-brand" aria-label="home">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            <path d="M11 7.5c0 0-3 3.5-3 5C8 14 9.3 15 11 15s3-1 3-2.5c0-1.5-3-5-3-5z"
+                                fill="currentColor" stroke="none" />
+                        </svg>
+                        <span>FindMyBlood</span>
+                    </a>
+                    <nav role="navigation" class="nav-menu-wrapper">
+                        <ul role="list" class="nav-menu">
+                            <li class="list-item"><a href="index.html" class="nav-link">Home</a></li>
+                            <li><a href="index.html#faq" class="nav-link">FAQ's</a></li>
+                            <li><a href="cities.html" class="nav-link">Cities</a></li>
+                            <li><a href="need-blood.html" class="nav-link">NeedBlood</a></li>
+                            <li><a href="donate.html" class="nav-link">Donate</a></li>
+                            <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                            <li class="mobile-margin-top-10">
+                                <div class="nav-button-wrapper">
+                                    <a href="donate.html" class="button-primary">SIGN UP</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="menu-button" aria-label="menu" role="button" tabindex="0">
+                        <div class="w-icon-nav-menu">☰</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Donate Section -->
+    <section id="donate" class="section donate-section" style="padding-top: 140px;">
+        <div class="w-layout-blockcontainer container-regular w-container">
+
+            <!-- Success Section (Hidden by default) -->
+            <div id="donate-success" class="donate-success hidden">
+                <div class="donate-header-center animate-scale-in">
+                    <div class="success-icon-wrapper">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="success-icon">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                    </div>
+                    <h2 class="donate-heading">Thank You for Registering!</h2>
+                    <p class="donate-subtext">You are now a registered blood donor. You will receive notifications when
+                        someone nearby needs your blood type. Together, we save lives!</p>
+
+                    <div class="success-details-card">
+                        <h3 class="card-heading">Your Registration Details</h3>
+                        <div class="success-detail-row">
+                            <span class="detail-label">Name</span>
+                            <span class="detail-value" id="success-name"></span>
+                        </div>
+                        <div class="success-detail-row">
+                            <span class="detail-label">Blood Group</span>
+                            <span class="detail-value text-primary" id="success-blood"></span>
+                        </div>
+                        <div class="success-detail-row">
+                            <span class="detail-label">Phone</span>
+                            <span class="detail-value" id="success-phone"></span>
+                        </div>
+                        <div class="success-detail-row">
+                            <span class="detail-label">City</span>
+                            <span class="detail-value" id="success-city"></span>
+                        </div>
+                    </div>
+
+                    <a href="dashboard.html" class="button donate-submit-btn w-button"
+                        style="text-decoration: none; display: inline-flex; justify-content: center; align-items: center;">Go
+                        to Dashboard</a>
+                </div>
+            </div>
+
+            <div id="donate-content">
+                <div class="donate-header-center">
+                    <div class="donate-icon-wrapper">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h2 class="donate-heading">Become a Blood Donor</h2>
+                    <p class="donate-subtext">Register as a blood donor and help save lives in your community. Your one
+                        donation can save up to 3 lives!</p>
+                </div>
+
+                <div class="donate-grid">
+                    <!-- Left Column: Registration Form -->
+                    <div class="donate-card form-card">
+                        <h3 class="card-heading">Donor Registration</h3>
+                        <p class="card-subtext">Fill in your details to register as a blood donor</p>
+
+                        <form id="donate-form" class="donate-form" onsubmit="event.preventDefault();">
+                            <div class="form-group">
+                                <label class="form-label" for="full-name">Full Name</label>
+                                <input type="text" id="full-name" class="form-input" placeholder="Enter your full name"
+                                    required>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="blood-group">Blood Group</label>
+
+                                <!-- Custom Dropdown -->
+                                <div class="custom-dropdown" id="blood-group-dropdown">
+                                    <input type="hidden" id="blood-group" name="blood-group" value="" required>
+                                    <button type="button" class="dropdown-trigger" aria-haspopup="listbox"
+                                        aria-expanded="false">
+                                        <span class="dropdown-value">Select your blood group</span>
+                                        <svg class="dropdown-chevron" width="20" height="20" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                    </button>
+                                    <ul class="dropdown-menu" role="listbox">
+                                        <li class="dropdown-item" data-value="" role="option">Select your blood group
+                                        </li>
+                                        <li class="dropdown-item" data-value="A+" role="option">A+</li>
+                                        <li class="dropdown-item" data-value="A-" role="option">A-</li>
+                                        <li class="dropdown-item" data-value="B+" role="option">B+</li>
+                                        <li class="dropdown-item" data-value="B-" role="option">B-</li>
+                                        <li class="dropdown-item" data-value="AB+" role="option">AB+</li>
+                                        <li class="dropdown-item" data-value="AB-" role="option">AB-</li>
+                                        <li class="dropdown-item" data-value="O+" role="option">O+</li>
+                                        <li class="dropdown-item" data-value="O-" role="option">O-</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="phone">Phone Number</label>
+                                <input type="tel" id="phone" class="form-input" placeholder="Enter your phone number"
+                                    required>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="city">City</label>
+
+                                <!-- Custom Dropdown -->
+                                <div class="custom-dropdown" id="city-dropdown">
+                                    <input type="hidden" id="city" name="city" value="" required>
+                                    <button type="button" class="dropdown-trigger" aria-haspopup="listbox"
+                                        aria-expanded="false">
+                                        <span class="dropdown-value">Select your city</span>
+                                        <svg class="dropdown-chevron" width="20" height="20" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                    </button>
+                                    <ul class="dropdown-menu" role="listbox">
+                                        <li class="dropdown-item" data-value="" role="option">Select your city</li>
+                                        <li class="dropdown-item" data-value="Hyderabad" role="option">Hyderabad</li>
+                                        <li class="dropdown-item" data-value="Vizag" role="option">Vizag</li>
+                                        <li class="dropdown-item" data-value="Amaravathi" role="option">Amaravathi</li>
+                                        <li class="dropdown-item" data-value="Khammam" role="option">Khammam</li>
+                                        <li class="dropdown-item" data-value="Vijayawada" role="option">Vijayawada</li>
+                                        <li class="dropdown-item" data-value="Kurnool" role="option">Kurnool</li>
+                                        <li class="dropdown-item" data-value="Guntur" role="option">Guntur</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <button id="donate-submit-btn" type="submit" class="button donate-submit-btn w-button">
+                                <span class="btn-text"
+                                    style="display: flex; align-items: center; justify-content: center;">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" style="margin-right:8px;">
+                                        <path
+                                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                        </path>
+                                    </svg>
+                                    Register as Donor
+                                </span>
+                                <span class="btn-loader hidden"
+                                    style="display: none; align-items: center; justify-content: center;">
+                                    <svg class="animate-spin" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2" style="margin-right:8px;">
+                                        <circle cx="12" cy="12" r="10" stroke-opacity="0.25"></circle>
+                                        <path d="M4 12a8 8 0 0 1 8-8" stroke-opacity="0.75" stroke-linecap="round">
+                                        </path>
+                                    </svg>
+                                    Registering...
+                                </span>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Right Column: Info -->
+                    <div class="donate-info-stack">
+                        <!-- Why Donate -->
+                        <div class="donate-card info-card">
+                            <h3 class="card-heading" style="color: var(--primary-color);">Why Donate Blood?</h3>
+                            <div class="why-donate-list">
+                                <div class="why-item">
+                                    <div class="why-badge">1</div>
+                                    <div class="why-content">
+                                        <h4>Save Lives</h4>
+                                        <p>One donation can save up to 3 lives</p>
+                                    </div>
+                                </div>
+                                <div class="why-item">
+                                    <div class="why-badge">2</div>
+                                    <div class="why-content">
+                                        <h4>Free Health Check</h4>
+                                        <p>Get your blood tested for diseases</p>
+                                    </div>
+                                </div>
+                                <div class="why-item">
+                                    <div class="why-badge">3</div>
+                                    <div class="why-content">
+                                        <h4>Feel Good</h4>
+                                        <p>Experience the joy of helping others</p>
+                                    </div>
+                                </div>
+                                <div class="why-item">
+                                    <div class="why-badge">4</div>
+                                    <div class="why-content">
+                                        <h4>Quick Process</h4>
+                                        <p>Donation takes only 10-15 minutes</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Eligibility -->
+                        <div class="donate-card eligibility-card">
+                            <h3 class="eligibility-heading">Eligibility Criteria</h3>
+                            <ul class="eligibility-list">
+                                <li>Age between 18-65 years</li>
+                                <li>Weight above 45 kg</li>
+                                <li>Hemoglobin level above 12.5 g/dL</li>
+                                <li>No major illness in the past 6 months</li>
+                                <li>Gap of 3 months since last donation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <a href="index.html" class="footer-brand">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        <path d="M11 7.5c0 0-3 3.5-3 5C8 14 9.3 15 11 15s3-1 3-2.5c0-1.5-3-5-3-5z" fill="currentColor"
+                            stroke="none" />
+                    </svg>
+                    <span>FindMyBlood</span>
+                </a>
+            </div>
+            <div class="footer-right">
+                <h3 class="footer-heading">About FindMyBlood</h3>
+                <p class="footer-description">FindMyBlood is a life-saving platform designed to instantly connect
+                    patients in need of blood with verified nearby donors. When every minute matters, FindMyBlood
+                    removes delays, confusion, and dependency on inefficient systems.</p>
+                <p class="footer-credit">Built By <a href="https://sainishanth.online" target="_blank"
+                        rel="noopener noreferrer" class="footer-credit-link">M.Sai Nishanth</a></p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- FAB Button -->
+    <div class="fab-container">
+        <button class="brutalist-fab" id="fab-trigger" aria-label="Open Command Palette">
+            <div class="fab-icon-wrapper">
+                <svg class="fab-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M15 6v12a3 3 0 1 0 3-3H6a3 3 0 1 0 3 3V6a3 3 0 1 0-3 3h12a3 3 0 1 0-3-3z" />
+                </svg>
+            </div>
+        </button>
+    </div>
+
+    <!-- Command Palette Backdrop -->
+    <div class="cmd-backdrop" id="cmd-backdrop">
+        <div class="cmd-container">
+            <div class="cmd-surface">
+                <!-- Input -->
+                <div class="cmd-input-wrapper">
+                    <svg class="cmd-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input type="text" class="cmd-input" id="cmd-input" placeholder="Type a command or search...">
+                    <span class="cmd-esc">esc</span>
+                </div>
+
+                <!-- List -->
+                <div class="cmd-list" id="cmd-list">
+
+                    <!-- Pages Group -->
+                    <div class="cmd-group">
+                        <div class="cmd-group-heading">Pages</div>
+
+                        <a href="index.html" class="cmd-item">
+                            <div class="cmd-item-left">
+                                <svg class="cmd-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                                </svg>
+                                <span>Home</span>
+                            </div>
+                            <span class="cmd-shortcut">H</span>
+                        </a>
+
+                        <a href="index.html#faq" class="cmd-item">
+                            <div class="cmd-item-left">
+                                <svg class="cmd-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                                </svg>
+                                <span>FAQ</span>
+                            </div>
+                            <span class="cmd-shortcut">Q</span>
+                        </a>
+
+                        <a href="need-blood.html" class="cmd-item selected">
+                            <!-- Pre-select one for visual demo? No, let hover handle it -->
+                            <div class="cmd-item-left">
+                                <svg class="cmd-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                </svg>
+                                <span>Find Donors</span>
+                            </div>
+                            <span class="cmd-shortcut">F</span>
+                        </a>
+
+                        <a href="donate.html" class="cmd-item">
+                            <div class="cmd-item-left">
+                                <svg class="cmd-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                    </path>
+                                </svg>
+                                <span>Donate</span>
+                            </div>
+                            <span class="cmd-shortcut">D</span>
+                        </a>
+
+                        <a href="dashboard.html" class="cmd-item">
+                            <div class="cmd-item-left">
+                                <svg class="cmd-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                    <line x1="3" y1="9" x2="21" y2="9"></line>
+                                    <line x1="9" y1="21" x2="9" y2="9"></line>
+                                </svg>
+                                <span>Dashboard</span>
+                            </div>
+                            <span class="cmd-shortcut">B</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/command-palette.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+/* Text Animation Styles */
+
+/* Fade in from bottom */
+.animate-fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+.animate-fade-up.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Fade in from left */
+.animate-fade-left {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+.animate-fade-left.animated {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Fade in from right */
+.animate-fade-right {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+.animate-fade-right.animated {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Scale fade in */
+.animate-scale {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+.animate-scale.animated {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Stagger delay for multiple elements */
+.animate-delay-1 {
+    transition-delay: 0.1s;
+}
+
+.animate-delay-2 {
+    transition-delay: 0.2s;
+}
+
+.animate-delay-3 {
+    transition-delay: 0.3s;
+}
+
+.animate-delay-4 {
+    transition-delay: 0.4s;
+}
+
+.animate-delay-5 {
+    transition-delay: 0.5s;
+}

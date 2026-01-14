@@ -1,0 +1,40 @@
+<!-- 
+    FindMyBlood - Navigation Bar Component
+    Usage: Copy this navbar into your HTML pages
+    Path: src/components/navbar.html
+-->
+<nav class="navbar-no-shadow">
+    <div class="navbar-no-shadow-container">
+        <div class="container-regular">
+            <div class="navbar-wrapper">
+                <a href="index.html" class="navbar-brand" aria-label="home">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        <path d="M11 7.5c0 0-3 3.5-3 5C8 14 9.3 15 11 15s3-1 3-2.5c0-1.5-3-5-3-5z" fill="currentColor"
+                            stroke="none" />
+                    </svg>
+                    <span>FindMyBlood</span>
+                </a>
+                <nav role="navigation" class="nav-menu-wrapper">
+                    <ul role="list" class="nav-menu">
+                        <li class="list-item"><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="index.html#faq" class="nav-link">FAQ's</a></li>
+                        <li><a href="need-blood.html" class="nav-link">NeedBlood</a></li>
+                        <li><a href="donate.html" class="nav-link">Donate</a></li>
+                        <li><a href="index.html#dashboard" class="nav-link">Dashboard</a></li>
+                        <li class="mobile-margin-top-10">
+                            <div class="nav-button-wrapper">
+                                <a href="index.html#signup" class="button-primary">SIGN UP</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="menu-button" aria-label="menu" role="button" tabindex="0">
+                    <div class="w-icon-nav-menu">☰</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
