@@ -1,7 +1,7 @@
 
 // Mock Data Generators for FindMyBlood
 (function () {
-    // South Indian names for donors
+    //Indian names for donors
     const southIndianNames = [
         "Venkatesh Reddy", "Lakshmi Devi", "Srikanth Rao", "Padmavathi K", "Ravi Teja",
         "Anitha Kumari", "Suresh Babu", "Kavitha Reddy", "Ramesh Chandra", "Sunitha Devi",
