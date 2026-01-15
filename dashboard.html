@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    
+
     <nav class="navbar-no-shadow">
         <div class="navbar-no-shadow-container">
             <div class="container-regular">
@@ -48,7 +48,7 @@
                             </li>
                         </ul>
                     </nav>
-                    <div class="menu-button" aria-label="menu" role="button" tabindex="0">
+                    <div class="menu-button" id="menuToggle" aria-label="menu" role="button" tabindex="0">
                         <div class="w-icon-nav-menu">☰</div>
                     </div>
                 </div>
@@ -56,21 +56,21 @@
         </div>
     </nav>
 
-    
+
     <main class="dashboard-section" style="padding-top: 120px; min-height: 100vh; background: #F9FAFB;">
         <div class="w-layout-blockcontainer container-regular w-container">
 
-            
+
             <div class="dashboard-header animate-fade-in">
                 <h1 class="dashboard-title">Donor Dashboard</h1>
                 <p class="dashboard-subtitle">Welcome back, SaiNishanth! Manage your donor profile here.</p>
             </div>
 
             <div class="dashboard-grid">
-                
+
                 <div class="dashboard-main">
 
-                    
+
                     <div class="dashboard-card animate-fade-in-up">
                         <div class="card-header">
                             <h3 class="card-title">
@@ -84,7 +84,7 @@
                         </div>
                         <div class="card-body">
                             <div class="profile-content">
-                                
+
                                 <div class="profile-avatar">
                                     <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                         stroke-width="2">
@@ -93,7 +93,7 @@
                                     </svg>
                                 </div>
 
-                                
+
                                 <div class="profile-info">
                                     <div class="profile-name-row">
                                         <h2 class="profile-name">SaiNishanth</h2>
@@ -145,7 +145,7 @@
                         </div>
                     </div>
 
-                    
+
                     <div class="dashboard-card animate-fade-in-up" style="animation-delay: 0.1s;">
                         <div class="card-header">
                             <h3 class="card-title">
@@ -186,7 +186,7 @@
                         </div>
                     </div>
 
-                    
+
                     <div class="dashboard-card animate-fade-in-up" style="animation-delay: 0.15s;">
                         <div class="card-body" style="padding-top: 24px;">
                             <div class="next-eligible-content">
@@ -208,10 +208,10 @@
                     </div>
                 </div>
 
-                
+
                 <div class="dashboard-sidebar">
 
-                    
+
                     <div class="dashboard-card stat-card-primary animate-fade-in-up" style="animation-delay: 0.1s;">
                         <div class="card-body">
                             <div class="stat-content">
@@ -229,7 +229,7 @@
                         </div>
                     </div>
 
-                    
+
                     <div class="dashboard-card animate-fade-in-up" style="animation-delay: 0.15s;">
                         <div class="card-body">
                             <div class="stat-content">
@@ -249,7 +249,7 @@
                         </div>
                     </div>
 
-                    
+
                     <div class="dashboard-card animate-fade-in-up" style="animation-delay: 0.2s;">
                         <div class="card-body">
                             <div class="stat-content">
@@ -268,7 +268,7 @@
                         </div>
                     </div>
 
-                    
+
                     <div class="dashboard-card animate-fade-in-up" style="animation-delay: 0.25s;">
                         <div class="card-header">
                             <h3 class="card-title" style="font-size: 1rem;">Recent Donations</h3>
@@ -303,7 +303,7 @@
         </div>
     </main>
 
-    
+
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-left">
@@ -331,7 +331,20 @@
 
 
 
-    
+
+    <div class="mobile-menu-panel" id="mobileMenu">
+        <nav class="menu-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#faq">FAQs</a>
+            <a href="cities.html">Cities</a>
+            <a href="need-blood.html">Need Blood</a>
+            <a href="donate.html">Donate</a>
+            <a href="dashboard.html">Dashboard</a>
+        </nav>
+        <a href="donate.html" class="menu-cta">Sign Up</a>
+    </div>
+
+
     <div class="fab-container">
         <button class="brutalist-fab" id="fab-trigger" aria-label="Open Command Palette">
             <div class="fab-icon-wrapper">
@@ -343,11 +356,11 @@
         </button>
     </div>
 
-    
+
     <div class="cmd-backdrop" id="cmd-backdrop">
         <div class="cmd-container">
             <div class="cmd-surface">
-                
+
                 <div class="cmd-input-wrapper">
                     <svg class="cmd-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <circle cx="11" cy="11" r="8"></circle>
@@ -357,10 +370,10 @@
                     <span class="cmd-esc">esc</span>
                 </div>
 
-                
+
                 <div class="cmd-list" id="cmd-list">
 
-                    
+
                     <div class="cmd-group">
                         <div class="cmd-group-heading">Pages</div>
 
@@ -390,7 +403,7 @@
                         </a>
 
                         <a href="need-blood.html" class="cmd-item selected">
-                            
+
                             <div class="cmd-item-left">
                                 <svg class="cmd-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     stroke-width="2">

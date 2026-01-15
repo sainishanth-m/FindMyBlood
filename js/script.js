@@ -399,15 +399,31 @@ function initCustomDropdowns() {
 document.addEventListener('DOMContentLoaded', initCustomDropdowns);
 
 
+// Mobile Menu Logic (Slide-in Panel)
 document.addEventListener('DOMContentLoaded', function () {
-    const menuBtn = document.querySelector('.menu-button');
-    const navMenuWrapper = document.querySelector('.nav-menu-wrapper');
+    const menuBtn = document.getElementById("menuToggle");
+    const mobileMenu = document.getElementById("mobileMenu");
 
-    if (menuBtn && navMenuWrapper) {
-        menuBtn.addEventListener('click', function () {
-            navMenuWrapper.classList.toggle('open');
-            const isOpen = navMenuWrapper.classList.contains('open');
-            menuBtn.setAttribute('aria-expanded', isOpen);
+    if (menuBtn && mobileMenu) {
+        // Toggle menu on button click
+        menuBtn.addEventListener("click", (e) => {
+            e.stopPropagation(); // Prevent immediate closing
+            mobileMenu.classList.toggle("open");
+        });
+
+        // Close when clicking outside
+        document.addEventListener("click", (e) => {
+            if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                mobileMenu.classList.remove("open");
+            }
+        });
+
+        // Close on link click
+        const links = mobileMenu.querySelectorAll("a");
+        links.forEach(link => {
+            link.addEventListener("click", () => {
+                mobileMenu.classList.remove("open");
+            });
         });
     }
 });

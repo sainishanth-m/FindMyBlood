@@ -20,7 +20,7 @@
 </head>
 
 <body>
-    
+
     <nav class="navbar-no-shadow">
         <div class="navbar-no-shadow-container">
             <div class="container-regular">
@@ -58,16 +58,16 @@
         </div>
     </nav>
 
-    
+
     <section class="section section-white cities-section" style="padding-top: 140px; min-height: 100vh;">
         <div class="w-layout-blockcontainer container-regular w-container">
             <div class="cities-layout">
-                
+
                 <div class="cities-left-image">
                     <img src="assets/images/charminar.png" class="floating-image" alt="Hyderabad">
                 </div>
 
-                
+
                 <div class="cities-center-content">
                     <h2 class="cities-heading">Cities We Are In</h2>
                     <div class="cities-grid">
@@ -130,7 +130,7 @@
                     </div>
                 </div>
 
-                
+
                 <div class="cities-right-image">
                     <img src="assets/images/vijayawada.png" class="floating-image" alt="Ambedkar Statue">
                 </div>
@@ -138,7 +138,7 @@
         </div>
     </section>
 
-    
+
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-left">
@@ -166,7 +166,7 @@
 
 
 
-    
+
     <div class="mobile-menu-panel" id="mobileMenu">
         <nav class="menu-links">
             <a href="index.html">Home</a>
@@ -179,7 +179,7 @@
         <a href="donate.html" class="menu-cta">Sign Up</a>
     </div>
 
-    
+
     <div class="fab-container">
         <button class="brutalist-fab" id="fab-trigger" aria-label="Open Command Palette">
             <div class="fab-icon-wrapper">
@@ -191,11 +191,11 @@
         </button>
     </div>
 
-    
+
     <div class="cmd-backdrop" id="cmd-backdrop">
         <div class="cmd-container">
             <div class="cmd-surface">
-                
+
                 <div class="cmd-input-wrapper">
                     <svg class="cmd-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <circle cx="11" cy="11" r="8"></circle>
@@ -205,10 +205,10 @@
                     <span class="cmd-esc">esc</span>
                 </div>
 
-                
+
                 <div class="cmd-list" id="cmd-list">
 
-                    
+
                     <div class="cmd-group">
                         <div class="cmd-group-heading">Pages</div>
 
@@ -238,7 +238,7 @@
                         </a>
 
                         <a href="need-blood.html" class="cmd-item selected">
-                            
+
                             <div class="cmd-item-left">
                                 <svg class="cmd-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     stroke-width="2">
@@ -284,29 +284,8 @@
     <script src="js/command-palette.js"></script>
     <script src="js/script.js"></script>
 
-    
-    <script>
-        const menuBtn = document.getElementById("menuToggle");
-        const mobileMenu = document.getElementById("mobileMenu");
 
-        if (menuBtn && mobileMenu) {
-            menuBtn.addEventListener("click", () => {
-                mobileMenu.classList.toggle("open");
-            });
 
-            document.addEventListener("click", (e) => {
-                if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
-                    mobileMenu.classList.remove("open");
-                }
-            });
-
-            document.querySelectorAll(".menu-links a, .menu-cta").forEach(link => {
-                link.addEventListener("click", () => {
-                    mobileMenu.classList.remove("open");
-                });
-            });
-        }
-    </script>
 </body>
 
 </html>

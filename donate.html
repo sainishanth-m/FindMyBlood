@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    
+
     <nav class="navbar-no-shadow">
         <div class="navbar-no-shadow-container">
             <div class="container-regular">
@@ -49,7 +49,7 @@
                             </li>
                         </ul>
                     </nav>
-                    <div class="menu-button" aria-label="menu" role="button" tabindex="0">
+                    <div class="menu-button" id="menuToggle" aria-label="menu" role="button" tabindex="0">
                         <div class="w-icon-nav-menu">☰</div>
                     </div>
                 </div>
@@ -57,11 +57,11 @@
         </div>
     </nav>
 
-    
+
     <section id="donate" class="section donate-section" style="padding-top: 140px;">
         <div class="w-layout-blockcontainer container-regular w-container">
 
-            
+
             <div id="donate-success" class="donate-success hidden">
                 <div class="donate-header-center animate-scale-in">
                     <div class="success-icon-wrapper">
@@ -117,7 +117,7 @@
                 </div>
 
                 <div class="donate-grid">
-                    
+
                     <div class="donate-card form-card">
                         <h3 class="card-heading">Donor Registration</h3>
                         <p class="card-subtext">Fill in your details to register as a blood donor</p>
@@ -132,7 +132,7 @@
                             <div class="form-group">
                                 <label class="form-label" for="blood-group">Blood Group</label>
 
-                                
+
                                 <div class="custom-dropdown" id="blood-group-dropdown">
                                     <input type="hidden" id="blood-group" name="blood-group" value="" required>
                                     <button type="button" class="dropdown-trigger" aria-haspopup="listbox"
@@ -167,7 +167,7 @@
                             <div class="form-group">
                                 <label class="form-label" for="city">City</label>
 
-                                
+
                                 <div class="custom-dropdown" id="city-dropdown">
                                     <input type="hidden" id="city" name="city" value="" required>
                                     <button type="button" class="dropdown-trigger" aria-haspopup="listbox"
@@ -216,9 +216,9 @@
                         </form>
                     </div>
 
-                    
+
                     <div class="donate-info-stack">
-                        
+
                         <div class="donate-card info-card">
                             <h3 class="card-heading" style="color: var(--primary-color);">Why Donate Blood?</h3>
                             <div class="why-donate-list">
@@ -253,7 +253,7 @@
                             </div>
                         </div>
 
-                        
+
                         <div class="donate-card eligibility-card">
                             <h3 class="eligibility-heading">Eligibility Criteria</h3>
                             <ul class="eligibility-list">
@@ -272,7 +272,7 @@
 
 
 
-    
+
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-left">
@@ -300,7 +300,20 @@
 
 
 
-    
+
+    <div class="mobile-menu-panel" id="mobileMenu">
+        <nav class="menu-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#faq">FAQs</a>
+            <a href="cities.html">Cities</a>
+            <a href="need-blood.html">Need Blood</a>
+            <a href="donate.html">Donate</a>
+            <a href="dashboard.html">Dashboard</a>
+        </nav>
+        <a href="donate.html" class="menu-cta">Sign Up</a>
+    </div>
+
+
     <div class="fab-container">
         <button class="brutalist-fab" id="fab-trigger" aria-label="Open Command Palette">
             <div class="fab-icon-wrapper">
@@ -312,11 +325,11 @@
         </button>
     </div>
 
-    
+
     <div class="cmd-backdrop" id="cmd-backdrop">
         <div class="cmd-container">
             <div class="cmd-surface">
-                
+
                 <div class="cmd-input-wrapper">
                     <svg class="cmd-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <circle cx="11" cy="11" r="8"></circle>
@@ -326,10 +339,10 @@
                     <span class="cmd-esc">esc</span>
                 </div>
 
-                
+
                 <div class="cmd-list" id="cmd-list">
 
-                    
+
                     <div class="cmd-group">
                         <div class="cmd-group-heading">Pages</div>
 
@@ -359,7 +372,7 @@
                         </a>
 
                         <a href="need-blood.html" class="cmd-item selected">
-                            
+
                             <div class="cmd-item-left">
                                 <svg class="cmd-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     stroke-width="2">
