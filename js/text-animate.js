@@ -1,4 +1,4 @@
-// Text Animation on Scroll
+﻿
 document.addEventListener('DOMContentLoaded', function () {
     const animatedElements = document.querySelectorAll('[class*="animate-"]');
 
@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', function () {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('animated');
-                // Optional: unobserve after animation to prevent re-triggering
-                // observer.unobserve(entry.target);
+
+
             }
         });
     }, observerOptions);

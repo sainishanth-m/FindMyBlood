@@ -1,4 +1,4 @@
-
+﻿
 const FAB_HTML = `
 <!-- FAB Button -->
 <div class="fab-container">
@@ -82,10 +82,10 @@ const FAB_HTML = `
 `;
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Inject the FAB and Command Palette HTML
+
     const componentPath = 'components/fab.html';
 
-    // Check if FAB already exists
+
     if (document.querySelector('.fab-container') || document.querySelector('.cmd-backdrop')) {
         initCommandPalette();
         return;
@@ -110,7 +110,7 @@ function injectHtml(html) {
     div.innerHTML = html;
     document.body.appendChild(div);
 
-    // Initialize functionality after injection
+
     setTimeout(initCommandPalette, 100);
 }
 
@@ -130,7 +130,7 @@ function initCommandPalette() {
 
     let isOpen = false;
 
-    // Toggle Open/Close
+
     function togglePalette() {
         isOpen = !isOpen;
         if (isOpen) {
@@ -145,7 +145,7 @@ function initCommandPalette() {
         }
     }
 
-    // Event Listeners
+
     fabButton.addEventListener('click', (e) => {
         e.stopPropagation();
         togglePalette();
@@ -159,7 +159,7 @@ function initCommandPalette() {
 
 
 
-    // Keyboard Shortcuts
+
     document.addEventListener('keydown', (e) => {
         if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
             e.preventDefault();
@@ -169,20 +169,20 @@ function initCommandPalette() {
             togglePalette();
         }
 
-        // Page shortcuts
+
         if (isOpen && document.activeElement === input && e.altKey) {
-            // Maybe implement Alt+Key shortcuts if user wants
+
         }
     });
 
-    // Filter Logic
+
     input.addEventListener('input', (e) => {
         filterItems(e.target.value.toLowerCase());
     });
 
     function filterItems(query) {
         items.forEach(item => {
-            // Skip hidden items logic if complex, but simple version:
+
             const text = item.textContent.toLowerCase();
             if (text.includes(query)) {
                 item.style.display = 'flex';

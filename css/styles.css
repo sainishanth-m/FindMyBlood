@@ -1,4 +1,4 @@
-* {
+﻿* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,11 +12,11 @@
     --border-color: #e5e5e5;
     --font-heading: 'Onest', sans-serif;
     --font-body: 'Onest', sans-serif;
-    /* Changed to Onest */
+    
     --bg-light: #fef9eb;
     --success-color: #1e4620;
 
-    /* New Variables */
+    
     --16153c: #16153c;
     --344532: #344532;
     --transparent: transparent;
@@ -25,7 +25,7 @@
     --white: white;
     --313a2f: #313a2f;
 
-    /* Donor Card Design System */
+    
     --blood-red: #1e4620;
     --blood-red-hover: #143118;
     --availability-green: #10B981;
@@ -57,12 +57,12 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     line-height: 1.2;
-    /* User provided styles */
+    
     box-sizing: border-box;
     display: block;
 }
 
-/* Navigation Bar */
+
 .navbar-no-shadow {
     z-index: 59049;
     position: absolute;
@@ -201,8 +201,8 @@ body {
     position: relative;
 }
 
-/* Hero Section */
-/* Hero Section */
+
+
 .hero {
     padding: 100px 2rem;
     background: #ffffff;
@@ -225,7 +225,7 @@ body {
 
 .w-layout-blockcontainer {
     max-width: 1400px;
-    /* Wider container like reference */
+    
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -239,19 +239,19 @@ body {
 .div-block {
     flex-flow: column;
     justify-content: center;
-    /* Centered vertically */
+    
     align-items: flex-start;
     height: 100%;
     display: flex;
     position: relative;
     padding-top: 100px;
-    /* Reduced from 260px */
+    
 }
 
 .w-layout-grid {
     grid-row-gap: 16px;
     grid-column-gap: 60px;
-    /* More space between text and visual */
+    
     grid-template-rows: auto auto;
     grid-template-columns: 1fr 1fr;
     grid-auto-columns: 1fr;
@@ -268,11 +268,11 @@ body {
     color: #111111;
     text-indent: 0;
     text-transform: none;
-    /* Removed capitalize */
+    
     margin-bottom: 24px;
     font-family: Inter, sans-serif;
     font-size: 4.5rem;
-    /* Larger like reference */
+    
     font-weight: 700;
     line-height: 1.1;
     letter-spacing: -0.02em;
@@ -301,10 +301,10 @@ body {
 
 .text-block {
     font-size: 1.25rem;
-    /* refined */
+    
     line-height: 1.6;
     color: #374151;
-    /* Dark gray for readability */
+    
 }
 
 .text-block-flex {
@@ -314,7 +314,7 @@ body {
 
 .text-block-opacity-70 {
     opacity: 1;
-    /* Remove opacity, use explicit color */
+    
     color: #4b5563;
     max-width: 500px;
     margin-bottom: 10px;
@@ -360,7 +360,7 @@ body {
     left: 0;
     right: 0;
     pointer-events: none;
-    /* Let clicks pass through if empty, but link has events */
+    
 }
 
 .scroll-down-link {
@@ -418,7 +418,7 @@ body {
     background-color: var(--primary-color);
     color: #fff;
     border-radius: 8px;
-    /* Slightly less rounded */
+    
     justify-content: center;
     align-items: center;
     min-width: 160px;
@@ -440,10 +440,10 @@ body {
 
 .button.button-outline {
     border: 1px solid #E5E7EB;
-    /* Light border */
+    
     background-color: transparent;
     color: #111111;
-    /* Dark text */
+    
 }
 
 .button.button-outline:hover {
@@ -459,15 +459,13 @@ body {
     align-items: center;
 }
 
-/* Hero Video Styles */
-/* =========================
-   HERO VIDEO (FIXED)
-========================= */
+
+
 
 .hero-video-wrapper {
     width: 100%;
     height: 520px;
-    /* KEY: controls visual size like first site */
+    
     max-width: none;
     position: relative;
     display: flex;
@@ -479,28 +477,28 @@ body {
 
     background: transparent;
     overflow: hidden;
-    /* Hide overflow to crop the logo */
+    
 
     animation: float 6s ease-in-out infinite;
     box-shadow: none;
 }
 
-/* Desktop boost */
+
 @media (min-width: 1024px) {
     .hero-video-wrapper {
         height: 620px;
     }
 }
 
-/* Video itself */
+
 .hero-video {
     width: 110%;
-    /* Scale up to crop edges */
+    
     height: 110%;
 
     object-fit: cover;
     object-position: top left;
-    /* Position to hide bottom-right logo */
+    
     border-radius: 32px;
 
     opacity: 0;
@@ -512,14 +510,14 @@ body {
     mix-blend-mode: multiply;
 }
 
-/* Hide controls */
+
 .hero-video::-webkit-media-controls,
 .hero-video::-webkit-media-controls-enclosure,
 .hero-video::-webkit-media-controls-panel {
     display: none !important;
 }
 
-/* Fade-in animation */
+
 @keyframes fadeInVideo {
     from {
         opacity: 0;
@@ -541,7 +539,7 @@ body {
     overflow: hidden;
 
     background: transparent;
-    /* no white background */
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -564,12 +562,12 @@ body {
     padding: 0 20px;
 }
 
-/* remove any overlay if exists */
+
 .w-background-video::before {
     display: none !important;
 }
 
-/* Hide default video play button on some browsers */
+
 .w-background-video>video::-webkit-media-controls-start-playback-button {
     display: none !important;
     -webkit-appearance: none;
@@ -609,7 +607,7 @@ body {
     }
 }
 
-/* Footer */
+
 .footer {
     padding: 60px 2rem;
     background-color: #3d4a3c;
@@ -694,12 +692,12 @@ body {
     text-decoration: underline;
 }
 
-/* Legacy - for backward compatibility */
+
 .footer-content {
     max-width: 800px;
 }
 
-/* Responsive Design */
+
 @media (max-width: 1024px) {
     .hero-container {
         grid-template-columns: 1fr;
@@ -764,13 +762,13 @@ body {
         max-width: 250px;
     }
 
-    /* Grid layout - stack on mobile */
+    
     .w-layout-grid {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
     }
 
-    /* Hero video mobile styles */
+    
     .hero-video-wrapper {
         max-width: 90%;
     }
@@ -817,7 +815,7 @@ body {
     }
 }
 
-/* Healthcare Section */
+
 .background-video-2 {
     position: absolute;
     top: 0;
@@ -843,9 +841,9 @@ body {
     align-items: center;
     text-align: center;
     z-index: 1;
-    /* Ensure text is above video */
+    
     position: relative;
-    /* Needed for z-index */
+    
     display: flex;
     flex-direction: column;
     padding-top: 140px;
@@ -859,8 +857,8 @@ body {
     align-items: center;
 }
 
-/* Healthcare Section Specifics */
-/* Ensure section respects video aspect ratio on large screens to prevent cropping */
+
+
 @media (min-width: 768px) {
     .healthcare-section {
         height: auto !important;
@@ -871,7 +869,7 @@ body {
 
 .healthcare-section .div-block-center {
     justify-content: flex-start;
-    /* Padding top is inherited from .div-block-center rule (140px) */
+    
 }
 
 .healthcare-heading {
@@ -898,7 +896,7 @@ body {
     font-weight: 500;
 }
 
-/* Middle Men Section Specifics */
+
 .div-block-bottom {
     justify-content: flex-end;
     align-items: center;
@@ -932,15 +930,15 @@ body {
     right: 0;
     bottom: 0;
     pointer-events: none;
-    /* Allow clicks to pass through if needed, though text might need pointer-events: auto */
+    
 }
 
-/* Ensure text is selectable */
+
 .div-block-bottom * {
     pointer-events: auto;
 }
 
-/* FutureClinic Section */
+
 .section-900px {
     min-height: 900px;
 }
@@ -952,14 +950,14 @@ body {
     margin-left: 0;
 }
 
-/* Premium FAQ Section Styles */
+
 .faq-section {
     padding: 120px 5%;
-    /* Percentage padding for "offset" feel */
+    
     background-color: #ffffff;
     font-family: 'Onest', sans-serif;
     color: #0b0b0f;
-    /* Very dark navy/black */
+    
 }
 
 .faq-container {
@@ -972,9 +970,9 @@ body {
 .faq-layout {
     display: grid;
     grid-template-columns: 400px 1fr;
-    /* Fixed left, flexible right */
+    
     gap: 120px;
-    /* Visible negative space */
+    
     align-items: start;
 }
 
@@ -986,9 +984,9 @@ body {
 
 .faq-title {
     font-size: 64px;
-    /* Requested size */
+    
     line-height: 1.05;
-    /* Tight leading */
+    
     font-weight: 700;
     margin: 0;
     letter-spacing: -0.03em;
@@ -1001,12 +999,12 @@ body {
     flex-direction: column;
     width: 100%;
     margin-top: 20px;
-    /* align with first line of heading roughly */
+    
 }
 
 .faq-item {
     border-bottom: 1px solid rgba(11, 11, 15, 0.1);
-    /* Thin divider */
+    
 }
 
 .faq-question {
@@ -1028,12 +1026,12 @@ body {
 
 .faq-q-text {
     font-size: 20px;
-    /* Requested 18-20px */
+    
     font-weight: 500;
     line-height: 1.4;
     padding-right: 32px;
     color: #2d2d35;
-    /* Dark gray */
+    
     transition: color 0.15s ease;
 }
 
@@ -1052,7 +1050,7 @@ body {
     color: #0b0b0f;
 }
 
-/* Icon Animation: Plus to Minus */
+
 .faq-icon svg {
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1061,19 +1059,19 @@ body {
     transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Accordion Content */
+
 .faq-answer {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-    /* Soft, professional easing */
+    
     will-change: max-height;
 }
 
 .faq-answer-inner {
     padding-bottom: 40px;
     padding-right: 40px;
-    /* legible width */
+    
     opacity: 0;
     transform: translateY(8px);
     transition: opacity 0.3s ease, transform 0.3s ease;
@@ -1084,19 +1082,19 @@ body {
     font-size: 1.1rem;
     line-height: 1.6;
     color: #555560;
-    /* Muted reading color */
+    
 }
 
 .faq-answer-inner p:last-child {
     margin-bottom: 0;
 }
 
-/* Active State */
+
 .faq-item.active .faq-icon svg {
     transform: rotate(180deg);
 }
 
-/* Hide the vertical line to make it a minus */
+
 .faq-item.active .faq-icon line[x1="12"] {
     opacity: 0;
 }
@@ -1107,7 +1105,7 @@ body {
     transition-delay: 0.1s;
 }
 
-/* Mobile Responsiveness */
+
 @media (max-width: 991px) {
     .faq-layout {
         grid-template-columns: 1fr;
@@ -1148,11 +1146,11 @@ body {
     }
 }
 
-/* Specific Section Heading Adjustments */
+
 #findmyblood-platform .heading,
 #system-fails .heading {
     font-size: 3rem;
-    /* Reduced from 4.5rem Global/Hero default */
+    
     line-height: 1.2;
     margin-bottom: 24px;
 }
@@ -1165,7 +1163,7 @@ body {
     }
 }
 
-/* Donate Section Styles */
+
 .donate-section {
     padding: 100px 0;
     background-color: #FFFFFF;
@@ -1181,7 +1179,7 @@ body {
     width: 64px;
     height: 64px;
     background-color: rgba(31, 77, 43, 0.08);
-    /* Light green tint */
+    
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -1211,7 +1209,7 @@ body {
     align-items: start;
 }
 
-/* Cards */
+
 .donate-card {
     background: #FFFFFF;
     border-radius: 20px;
@@ -1224,7 +1222,7 @@ body {
     font-size: 24px;
     font-weight: 700;
     color: #1F4D2B;
-    /* Hero Green */
+    
     margin-bottom: 10px;
     margin-top: 0;
 }
@@ -1235,7 +1233,7 @@ body {
     margin-bottom: 30px;
 }
 
-/* Form Styles */
+
 .form-group {
     margin-bottom: 20px;
 }
@@ -1294,7 +1292,7 @@ body {
     transform: translateY(-2px);
 }
 
-/* Info Stack */
+
 .donate-info-stack {
     display: flex;
     flex-direction: column;
@@ -1341,19 +1339,19 @@ body {
     margin: 0;
 }
 
-/* Eligibility Card - Green Theme */
+
 .eligibility-card {
     background-color: #Fdfcfb;
-    /* Very light tint if desired, or white */
+    
     border-left: 4px solid #1F4D2B;
-    /* Green Accent border */
+    
 }
 
 .eligibility-heading {
     font-size: 20px;
     font-weight: 700;
     color: #1F4D2B;
-    /* Darker red-ish? No, User said GREEN. */
+    
     margin-top: 0;
     margin-bottom: 16px;
 }
@@ -1383,7 +1381,7 @@ body {
     top: -2px;
 }
 
-/* Response */
+
 @media (max-width: 991px) {
     .donate-grid {
         grid-template-columns: 1fr;
@@ -1399,7 +1397,7 @@ body {
     }
 }
 
-/* Need Blood Section Styles */
+
 .need-blood-section {
     padding: 100px 0;
     background-color: #FFFFFF;
@@ -1413,13 +1411,13 @@ body {
     align-items: center;
 }
 
-/* Left Column: Card */
+
 .need-blood-filters-card {
     background: #FFFFFF;
     border-radius: 20px;
     padding: 40px;
     box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.08);
-    /* Soft shadow */
+    
     border: 1px solid #E5E7EB;
 }
 
@@ -1427,7 +1425,7 @@ body {
     font-size: 24px;
     font-weight: 700;
     color: #1F4D2B;
-    /* Deep medical green */
+    
     margin-bottom: 30px;
     margin-top: 0;
 }
@@ -1444,7 +1442,7 @@ body {
     margin-bottom: 8px;
 }
 
-/* Custom Select */
+
 .select-wrapper {
     position: relative;
 }
@@ -1458,7 +1456,7 @@ body {
     background-color: #F9FAFB;
     border: 1px solid #E5E7EB;
     border-radius: 12px;
-    /* Smooth rounded inputs */
+    
     appearance: none;
     -webkit-appearance: none;
     cursor: pointer;
@@ -1478,11 +1476,11 @@ body {
     top: 50%;
     transform: translateY(-50%);
     color: #1F4D2B;
-    /* Outline style muted green */
+    
     pointer-events: none;
 }
 
-/* Slider */
+
 .slider-header {
     display: flex;
     justify-content: space-between;
@@ -1499,7 +1497,7 @@ body {
     width: 100%;
     height: 6px;
     background: #E5E7EB;
-    /* Light grey track */
+    
     border-radius: 3px;
     outline: none;
     appearance: none;
@@ -1513,7 +1511,7 @@ body {
     width: 20px;
     height: 20px;
     background: #1F4D2B;
-    /* Hero green */
+    
     border-radius: 50%;
     cursor: pointer;
     transition: transform 0.2s;
@@ -1535,33 +1533,33 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Button */
+
 .search-button {
     width: 100%;
     background-color: #1F4D2B;
-    /* Hero green */
+    
     color: #FFFFFF;
     padding: 16px;
     font-size: 16px;
     font-weight: 600;
     border-radius: 50px;
-    /* Pill shape */
+    
     border: none;
     cursor: pointer;
     text-align: center;
     transition: background-color 0.2s, transform 0.2s;
     margin-top: 10px;
     display: block;
-    /* Ensure it behaves like a block button */
+    
 }
 
 .search-button:hover {
     background-color: #163C20;
-    /* Darker green */
+    
     transform: scale(1.02);
 }
 
-/* Right Column: Guidance */
+
 .need-blood-guidance {
     display: flex;
     justify-content: center;
@@ -1574,7 +1572,7 @@ body {
     width: 80px;
     height: 80px;
     background-color: rgba(31, 77, 43, 0.08);
-    /* Light green tint */
+    
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -1584,7 +1582,7 @@ body {
 
 .guidance-icon {
     color: #1F4D2B;
-    /* Hero green stroke */
+    
 }
 
 .guidance-heading {
@@ -1598,13 +1596,13 @@ body {
 .guidance-text {
     font-size: 18px;
     color: #6B7280;
-    /* Soft grey */
+    
     line-height: 1.6;
     max-width: 400px;
     margin: 0 auto;
 }
 
-/* Responsiveness */
+
 @media (max-width: 991px) {
     .need-blood-grid {
         grid-template-columns: 1fr;
@@ -1612,7 +1610,7 @@ body {
     }
 }
 
-/* Utilities */
+
 .hidden {
     display: none !important;
 }
@@ -1621,7 +1619,7 @@ body {
     color: #1F4D2B !important;
 }
 
-/* Animations */
+
 @keyframes spin {
     from {
         transform: rotate(0deg);
@@ -1652,7 +1650,7 @@ body {
     animation: scaleIn 0.3s ease-out forwards;
 }
 
-/* Donate Success State */
+
 .donate-success {
     padding: 20px;
     width: 100%;
@@ -1707,18 +1705,15 @@ body {
     font-weight: 600;
 }
 
-/* =========================
-   DONOR CARD STYLES
-   Modern Medical-Grade UI
-========================= */
 
-/* Results Container */
+
+
 .need-blood-results {
     display: flex;
     flex-direction: column;
 }
 
-/* Results Header */
+
 .need-blood-results h2 {
     font-size: 1.875rem;
     font-weight: 700;
@@ -1726,15 +1721,15 @@ body {
     margin-bottom: 0.5rem;
 }
 
-/* Donors List Container */
+
 .donors-list {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    /* 24px breathing room between cards */
+    
 }
 
-/* Individual Donor Card */
+
 .donor-card {
     background: #FFFFFF;
     border-radius: 16px;
@@ -1749,7 +1744,7 @@ body {
     transform: translateY(10px);
 }
 
-/* Fade-in animation for cards */
+
 .donor-card.animate-fade-in {
     animation: cardFadeIn 0.4s ease-out forwards;
 }
@@ -1766,13 +1761,13 @@ body {
     }
 }
 
-/* Card hover effect */
+
 .donor-card:hover {
     box-shadow: var(--card-shadow-hover);
     transform: translateY(-2px);
 }
 
-/* Left Section: Avatar + Info */
+
 .card-left {
     display: flex;
     align-items: center;
@@ -1780,12 +1775,12 @@ body {
     flex: 1;
 }
 
-/* Circular Avatar */
+
 .avatar-circle {
     width: 56px;
     height: 56px;
     min-width: 56px;
-    /* Prevent shrinking */
+    
     background-color: var(--gray-100);
     border-radius: 50%;
     display: flex;
@@ -1800,31 +1795,31 @@ body {
     stroke-width: 2;
 }
 
-/* Info Content Stack */
+
 .info-content {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    /* 8px between rows */
+    
 }
 
-/* Donor Name */
+
 .donor-name {
     font-size: 1.125rem;
-    /* 18px - slightly larger */
+    
     font-weight: 700;
     color: var(--gray-900);
     margin: 0;
     line-height: 1.2;
 }
 
-/* Info Row (Distance, Availability, Phone) */
+
 .info-row {
     display: flex;
     align-items: center;
     gap: 0.5rem;
     font-size: 0.875rem;
-    /* 14px */
+    
     color: var(--gray-600);
 }
 
@@ -1839,61 +1834,61 @@ body {
     line-height: 1.4;
 }
 
-/* Availability Badge (Green Pill) */
+
 .status-badge {
     background-color: var(--availability-green-bg);
     color: var(--availability-green);
     padding: 0.25rem 0.75rem;
-    /* 4px 12px */
+    
     border-radius: 9999px;
-    /* Full pill */
+    
     font-size: 0.75rem;
-    /* 12px */
+    
     font-weight: 600;
     text-transform: capitalize;
     display: inline-flex;
     align-items: center;
 }
 
-/* Right Section: Blood Badge + Call Button */
+
 .card-right {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     gap: 1rem;
-    /* Space between badge and button */
+    
 }
 
-/* Blood Group Badge (Red Pill) */
+
 .blood-badge {
     background-color: #EF4444;
     color: #FFFFFF;
     padding: 0.375rem 1rem;
-    /* 6px 16px */
+    
     border-radius: 9999px;
     font-size: 0.875rem;
-    /* 14px */
+    
     font-weight: 700;
     letter-spacing: 0.025em;
     min-width: 60px;
     text-align: center;
 }
 
-/* Call Now Button */
+
 .btn-call-now {
     background-color: var(--blood-red);
     color: #FFFFFF;
     padding: 0.625rem 1.5rem;
-    /* 10px 24px */
+    
     border-radius: 9999px;
-    /* Full pill */
+    
     font-size: 0.875rem;
-    /* 14px */
+    
     font-weight: 600;
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    /* Space between icon and text */
+    
     text-decoration: none;
     border: none;
     cursor: pointer;
@@ -1917,7 +1912,7 @@ body {
     transform: scale(0.98);
 }
 
-/* Skeleton Loading Cards */
+
 .skeleton-card {
     background: #FFFFFF;
     border-radius: 16px;
@@ -1968,7 +1963,7 @@ body {
     }
 }
 
-/* Donor Card Responsive Design */
+
 @media (max-width: 768px) {
     .donor-card {
         flex-direction: column;
@@ -2033,7 +2028,7 @@ body {
     }
 }
 
-/* Additional Utility Animations */
+
 .animate-fade-in {
     animation: fadeIn 0.5s ease-out forwards;
 }
@@ -2074,11 +2069,9 @@ body {
     margin-bottom: 2rem;
 }
 
-/* =========================
-   PREMIUM SEARCH RADIUS SLIDER
-========================= */
 
-/* Slider Header */
+
+
 .slider-header {
     display: flex;
     justify-content: space-between;
@@ -2097,7 +2090,7 @@ body {
     text-align: center;
 }
 
-/* Filter Slider Container */
+
 .filter-slider {
     -webkit-appearance: none;
     appearance: none;
@@ -2110,7 +2103,7 @@ body {
     transition: all 0.2s ease;
 }
 
-/* Webkit (Chrome, Safari, Edge) Track */
+
 .filter-slider::-webkit-slider-runnable-track {
     width: 100%;
     height: 8px;
@@ -2118,7 +2111,7 @@ body {
     background: transparent;
 }
 
-/* Webkit Thumb */
+
 .filter-slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
@@ -2144,7 +2137,7 @@ body {
     border-color: var(--primary-color);
 }
 
-/* Mozilla (Firefox) Track */
+
 .filter-slider::-moz-range-track {
     width: 100%;
     height: 8px;
@@ -2152,7 +2145,7 @@ body {
     background: #E5E7EB;
 }
 
-/* Mozilla Thumb */
+
 .filter-slider::-moz-range-thumb {
     width: 24px;
     height: 24px;
@@ -2169,14 +2162,14 @@ body {
     box-shadow: 0 4px 12px rgba(30, 70, 32, 0.4);
 }
 
-/* Firefox Progress Fill */
+
 .filter-slider::-moz-range-progress {
     height: 8px;
     border-radius: 10px 0 0 10px;
     background: var(--primary-color);
 }
 
-/* Focus States */
+
 .filter-slider:focus {
     outline: none;
 }
@@ -2189,13 +2182,13 @@ body {
     box-shadow: 0 0 0 4px rgba(30, 70, 32, 0.2), 0 2px 6px rgba(30, 70, 32, 0.3);
 }
 
-/* Slider with Tooltip (optional enhancement) */
+
 .slider-container {
     position: relative;
     padding: 10px 0;
 }
 
-/* Slider Marks/Steps */
+
 .slider-marks {
     display: flex;
     justify-content: space-between;
@@ -2209,16 +2202,14 @@ body {
     font-weight: 500;
 }
 
-/* =========================
-   CUSTOM DROPDOWN COMPONENT
-========================= */
+
 
 .custom-dropdown {
     position: relative;
     width: 100%;
 }
 
-/* Dropdown Trigger Button */
+
 .dropdown-trigger {
     width: 100%;
     display: flex;
@@ -2270,7 +2261,7 @@ body {
     flex-shrink: 0;
 }
 
-/* Dropdown Menu */
+
 .dropdown-menu {
     position: absolute;
     top: calc(100% + 8px);
@@ -2297,7 +2288,7 @@ body {
     transform: translateY(0);
 }
 
-/* Dropdown Items */
+
 .dropdown-item {
     padding: 12px 16px;
     font-size: 1rem;
@@ -2319,12 +2310,12 @@ body {
     font-weight: 600;
 }
 
-/* First item (placeholder) styling */
+
 .dropdown-item[data-value=""]:not(.selected) {
     color: var(--gray-400);
 }
 
-/* Scrollbar for dropdown */
+
 .dropdown-menu::-webkit-scrollbar {
     width: 6px;
 }
@@ -2342,11 +2333,9 @@ body {
     background: var(--gray-400);
 }
 
-/* =========================
-   DASHBOARD PAGE STYLES
-========================= */
 
-/* Dashboard Header */
+
+
 .dashboard-header {
     margin-bottom: 2rem;
 }
@@ -2363,7 +2352,7 @@ body {
     font-size: 1rem;
 }
 
-/* Dashboard Grid Layout */
+
 .dashboard-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -2388,7 +2377,7 @@ body {
     gap: 1.5rem;
 }
 
-/* Dashboard Cards */
+
 .dashboard-card {
     background: #FFFFFF;
     border-radius: 16px;
@@ -2425,7 +2414,7 @@ body {
     padding: 20px 24px 24px;
 }
 
-/* Profile Card */
+
 .profile-content {
     display: flex;
     flex-direction: column;
@@ -2514,7 +2503,7 @@ body {
     font-weight: 500;
 }
 
-/* Availability Toggle */
+
 .availability-toggle-container {
     display: flex;
     flex-direction: column;
@@ -2605,7 +2594,7 @@ body {
     color: var(--text-light);
 }
 
-/* Toggle Switch */
+
 .switch {
     position: relative;
     display: inline-block;
@@ -2667,7 +2656,7 @@ input:checked+.slider:before {
     font-size: 0.875rem;
 }
 
-/* Next Eligible */
+
 .next-eligible-content {
     display: flex;
     align-items: center;
@@ -2702,7 +2691,7 @@ input:checked+.slider:before {
     margin: 0;
 }
 
-/* Stat Cards */
+
 .stat-card-primary {
     background: var(--primary-color) !important;
     color: #FFFFFF;
@@ -2779,7 +2768,7 @@ input:checked+.slider:before {
     color: var(--text-light);
 }
 
-/* Donations List */
+
 .donations-list {
     display: flex;
     flex-direction: column;
@@ -2840,13 +2829,11 @@ input:checked+.slider:before {
     display: none !important;
 }
 
-/* =========================
-   MOBILE RESPONSIVENESS
-========================= */
+
 
 @media screen and (max-width: 991px) {
 
-    /* Navbar Mobile */
+    
     .menu-button {
         display: block;
         z-index: 1000;
@@ -2906,7 +2893,7 @@ input:checked+.slider:before {
         text-align: center;
     }
 
-    /* Dashboard Mobile */
+    
     .dashboard-section {
         padding-top: 100px !important;
         padding-left: 1rem !important;
@@ -2942,7 +2929,7 @@ input:checked+.slider:before {
         margin-bottom: 1rem;
     }
 
-    /* Need Blood Mobile */
+    
     .need-blood-section {
         padding-top: 100px !important;
     }
@@ -2953,7 +2940,7 @@ input:checked+.slider:before {
         gap: 2rem;
     }
 
-    /* General Layout */
+    
     .container-regular {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
@@ -2989,12 +2976,12 @@ input:checked+.slider:before {
         padding: 16px;
     }
 
-    /* Make custom dropdowns full width on mobile if constrained */
+    
     .dropdown-menu {
         max-height: 250px;
     }
 
-    /* Hero Mobile Redesign (FutureClinic Style) */
+    
     .hero-grid {
         display: flex;
         flex-direction: column;
@@ -3010,7 +2997,7 @@ input:checked+.slider:before {
 
     .heading.cstm_heading {
         font-size: 2.5rem;
-        /* Large punchy text */
+        
         line-height: 1.2;
         margin-bottom: 1rem;
     }
@@ -3026,7 +3013,7 @@ input:checked+.slider:before {
         flex-direction: column;
         width: 100%;
         gap: 1rem;
-        /* Space between stacked buttons */
+        
         align-items: center;
     }
 
@@ -3036,16 +3023,16 @@ input:checked+.slider:before {
         padding: 16px 24px;
         font-size: 1.125rem;
         border-radius: 12px;
-        /* Pill/Rounded variation */
+        
     }
 
-    /* Primary button (Find Donors) - Dark Green */
+    
     .button:not(.button-outline) {
         background-color: var(--primary-color);
         color: #fff;
     }
 
-    /* Secondary button (Become a Donor) - Outline */
+    
     .button.button-outline {
         background-color: transparent;
         border: 2px solid var(--gray-300);
@@ -3056,34 +3043,34 @@ input:checked+.slider:before {
         width: 100%;
         height: auto;
         aspect-ratio: 16/9;
-        /* Or adjust based on image preference */
+        
         border-radius: 16px;
         margin-top: 1rem;
     }
 
-    /* Refined Mobile Spacing & Healthcare Section */
+    
     .hero-grid {
         padding-top: 40px;
-        /* Extra padding for navbar clearance */
+        
     }
 
     .hero {
         padding-top: 180px;
-        /* Increased top padding to clear navbar */
+        
     }
 
     .heading.cstm_heading {
         font-size: 2rem;
-        /* Smaller font for mobile */
+        
         margin-bottom: 1.25rem;
     }
 
     .button {
         padding: 18px 24px;
-        /* Taller touch targets */
+        
     }
 
-    /* Healthcare Mobile */
+    
     .healthcare-section {
         padding: 60px 1.5rem;
         text-align: center;
@@ -3108,39 +3095,38 @@ input:checked+.slider:before {
     }
 }
 
-/* Updated FAQ Background */
+
 .faq-section {
     background-color: #FEFDF5 !important;
-    /* Cream color from image */
+    
 }
 
-/* Fix for footer overlap on inner pages */
+
 .need-blood-section,
 .donate-section,
 .dashboard-section {
     padding-bottom: 120px !important;
-    /* Ensure ample space at bottom */
+    
     height: auto !important;
-    /* Fix overlap caused by .section height: 100vh */
+    
     min-height: 100vh;
 }
 
-/* Ensure footer has its own space */
+
 .footer {
     position: relative;
     z-index: 10;
 }
 
-/* Fix for eligibility card border */
+
 .donate-card.eligibility-card {
     border-left: none !important;
 }
 
-/* Update Become a Donor button style */
+
 .button.button-outline {
     border: 2px solid var(--primary-color) !important;
     color: var(--primary-color) !important;
     background-color: transparent !important;
 }
 
-/* Floating Action Button */

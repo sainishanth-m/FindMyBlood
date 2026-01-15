@@ -1,5 +1,5 @@
+﻿
 
-// Smooth scroll for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -10,11 +10,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Button click handlers (with null checks)
+
 const btnPrimary = document.querySelector('.btn-primary');
 if (btnPrimary) {
     btnPrimary.addEventListener('click', function () {
-        // Redirecting to need-blood.html for Find Donors makes more sense now
+
         window.location.href = 'need-blood.html';
     });
 }
@@ -22,7 +22,7 @@ if (btnPrimary) {
 const btnSecondary = document.querySelector('.btn-secondary');
 if (btnSecondary) {
     btnSecondary.addEventListener('click', function () {
-        // Redirect to donate page
+
         window.location.href = 'donate.html';
     });
 }
@@ -35,7 +35,7 @@ if (navBtn) {
 }
 
 
-// FAQ Accordion - Premium Logic
+
 function initFAQ() {
     const faqItems = document.querySelectorAll('.faq-item');
 
@@ -48,7 +48,7 @@ function initFAQ() {
         question.addEventListener('click', () => {
             const isOpen = item.classList.contains('active');
 
-            // Close all other items first
+
             faqItems.forEach(otherItem => {
                 if (otherItem !== item && otherItem.classList.contains('active')) {
                     otherItem.classList.remove('active');
@@ -60,7 +60,7 @@ function initFAQ() {
                 }
             });
 
-            // Toggle current item
+
             if (isOpen) {
                 item.classList.remove('active');
                 answer.style.maxHeight = null;
@@ -68,7 +68,7 @@ function initFAQ() {
                 answer.setAttribute('aria-hidden', 'true');
             } else {
                 item.classList.add('active');
-                // Set max-height to scrollHeight for smooth animation
+
                 answer.style.maxHeight = answer.scrollHeight + "px";
                 question.setAttribute('aria-expanded', 'true');
                 answer.setAttribute('aria-hidden', 'false');
@@ -84,7 +84,7 @@ if (document.readyState === 'loading') {
 }
 
 
-// Donate Form Logic
+
 function initDonateForm() {
     const form = document.getElementById('donate-form');
     if (!form) return;
@@ -95,7 +95,7 @@ function initDonateForm() {
     const btnText = submitBtn.querySelector('.btn-text');
     const btnLoader = submitBtn.querySelector('.btn-loader');
 
-    // Success View Elements
+
     const successSection = document.getElementById('donate-success');
     const contentSection = document.getElementById('donate-content');
     const successName = document.getElementById('success-name');
@@ -106,7 +106,7 @@ function initDonateForm() {
     form.addEventListener('submit', function (e) {
         e.preventDefault();
 
-        // 1. Show Loading
+
         submitBtn.disabled = true;
         if (btnText) btnText.style.display = 'none';
         if (btnLoader) {
@@ -114,9 +114,9 @@ function initDonateForm() {
             btnLoader.style.display = 'flex'; // Ensure flex for centering
         }
 
-        // 2. Simulate API Call
+
         setTimeout(() => {
-            // Get values
+
             const formData = {
                 name: document.getElementById('full-name').value,
                 blood: document.getElementById('blood-group').value,
@@ -124,17 +124,17 @@ function initDonateForm() {
                 city: document.getElementById('city').value
             };
 
-            // 3. Populate Success
+
             if (successName) successName.textContent = formData.name;
             if (successBlood) successBlood.textContent = formData.blood;
             if (successPhone) successPhone.textContent = formData.phone;
             if (successCity) successCity.textContent = formData.city;
 
-            // 4. Hide Form / Show Success
+
             if (contentSection) contentSection.classList.add('hidden');
             if (successSection) successSection.classList.remove('hidden');
 
-            // Scroll to top of section
+
             const donateSection = document.getElementById('donate');
             if (donateSection) donateSection.scrollIntoView({ behavior: 'smooth' });
 
@@ -142,17 +142,17 @@ function initDonateForm() {
     });
 }
 
-// Initialize Donate Form on load
+
 document.addEventListener('DOMContentLoaded', initDonateForm);
 
-// Need Blood Search Logic - React Port
-// mockDonors is loaded from ../data/mockDonors.js
+
+
 
 function initNeedBloodSearch() {
     const form = document.getElementById('search-form');
     if (!form) return;
 
-    // Key Elements
+
     const searchBtn = document.getElementById('search-btn');
     const btnText = searchBtn ? searchBtn.querySelector('.btn-text') : null;
     const btnLoader = searchBtn ? searchBtn.querySelector('.btn-loader') : null;
@@ -168,7 +168,7 @@ function initNeedBloodSearch() {
     const rangeInput = document.getElementById('radius');
     const rangeValue = document.querySelector('.slider-value');
 
-    // Slider Logic with dynamic track fill
+
     function updateSliderFill(slider) {
         const min = slider.min || 5;
         const max = slider.max || 50;
@@ -178,7 +178,7 @@ function initNeedBloodSearch() {
     }
 
     if (rangeInput && rangeValue) {
-        // Initialize on load
+
         updateSliderFill(rangeInput);
 
         rangeInput.addEventListener('input', (e) => {
@@ -187,17 +187,17 @@ function initNeedBloodSearch() {
         });
     }
 
-    // Handle Search
+
     form.addEventListener('submit', function (e) {
         e.preventDefault();
 
-        // Get Values
+
         const bloodGroup = document.getElementById('blood-group').value;
         const city = document.getElementById('city').value;
         const radius = rangeInput ? parseInt(rangeInput.value) : 25;
 
-        // --- STATE: SEARCHING ---
-        // 1. Update Button State
+
+
         if (searchBtn) searchBtn.disabled = true;
         if (btnText) btnText.style.display = 'none';
         if (btnLoader) {
@@ -205,15 +205,15 @@ function initNeedBloodSearch() {
             btnLoader.classList.remove('hidden');
         }
 
-        // 2. Update UI Areas
+
         if (initialState) initialState.classList.add('hidden');
         if (resultsContainer) resultsContainer.classList.add('hidden');
         if (noResults) noResults.classList.add('hidden');
         if (loadingState) loadingState.classList.remove('hidden');
 
-        // 3. Simulate API Delay (1500ms)
+
         setTimeout(() => {
-            // --- STATE: SEARCHED ---
+
             if (loadingState) loadingState.classList.add('hidden');
             if (searchBtn) searchBtn.disabled = false;
             if (btnText) btnText.style.display = 'flex';
@@ -224,20 +224,20 @@ function initNeedBloodSearch() {
 
             const donorsData = window.mockDonors || [];
 
-            // Filtering Logic
+
             let results = [...donorsData];
 
             if (bloodGroup) {
                 results = results.filter(d => d.bloodGroup === bloodGroup);
             }
-            if (city) { // React Logic: city.toLowerCase().includes(city.toLowerCase())
+            if (city) {
                 results = results.filter(d => d.city.toLowerCase().includes(city.toLowerCase()));
             }
 
-            // Radius logic
+
             results = results.filter(d => d.distance <= radius);
 
-            // Render Results
+
             if (results.length > 0) {
                 if (donorsList) {
                     donorsList.innerHTML = results.map((donor, index) => `
@@ -285,7 +285,7 @@ function initNeedBloodSearch() {
               `).join('');
                 }
 
-                // Update Header
+
                 if (donorCount) donorCount.textContent = results.length;
                 if (filterBadge) {
                     if (bloodGroup) {
@@ -298,7 +298,7 @@ function initNeedBloodSearch() {
 
                 if (resultsContainer) resultsContainer.classList.remove('hidden');
             } else {
-                // Show No Results
+
                 if (noResults) noResults.classList.remove('hidden');
             }
 
@@ -310,10 +310,10 @@ function getInitials(name) {
     return name.split(' ').map(n => n[0]).join('').toUpperCase();
 }
 
-// Initialize logic
+
 document.addEventListener('DOMContentLoaded', initNeedBloodSearch);
 
-// Custom Dropdown Logic
+
 function initCustomDropdowns() {
     const dropdowns = document.querySelectorAll('.custom-dropdown');
 
@@ -326,12 +326,12 @@ function initCustomDropdowns() {
 
         if (!trigger || !menu) return;
 
-        // Toggle dropdown
+
         trigger.addEventListener('click', (e) => {
             e.stopPropagation();
             const isOpen = dropdown.classList.contains('open');
 
-            // Close all other dropdowns
+
             document.querySelectorAll('.custom-dropdown.open').forEach(d => {
                 if (d !== dropdown) {
                     d.classList.remove('open');
@@ -339,21 +339,21 @@ function initCustomDropdowns() {
                 }
             });
 
-            // Toggle current dropdown
+
             dropdown.classList.toggle('open');
             trigger.setAttribute('aria-expanded', !isOpen);
         });
 
-        // Handle item selection
+
         items.forEach(item => {
             item.addEventListener('click', () => {
                 const value = item.dataset.value;
                 const text = item.textContent;
 
-                // Update hidden input
+
                 if (hiddenInput) hiddenInput.value = value;
 
-                // Update display text
+
                 if (valueDisplay) {
                     valueDisplay.textContent = text;
                     if (value) {
@@ -363,18 +363,18 @@ function initCustomDropdowns() {
                     }
                 }
 
-                // Update selected state
+
                 items.forEach(i => i.classList.remove('selected'));
                 item.classList.add('selected');
 
-                // Close dropdown
+
                 dropdown.classList.remove('open');
                 trigger.setAttribute('aria-expanded', 'false');
             });
         });
     });
 
-    // Close dropdowns when clicking outside
+
     document.addEventListener('click', (e) => {
         if (!e.target.closest('.custom-dropdown')) {
             document.querySelectorAll('.custom-dropdown.open').forEach(dropdown => {
@@ -384,7 +384,7 @@ function initCustomDropdowns() {
         }
     });
 
-    // Keyboard navigation
+
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
             document.querySelectorAll('.custom-dropdown.open').forEach(dropdown => {
@@ -395,10 +395,10 @@ function initCustomDropdowns() {
     });
 }
 
-// Initialize custom dropdowns
+
 document.addEventListener('DOMContentLoaded', initCustomDropdowns);
 
-// Mobile Menu Toggle
+
 document.addEventListener('DOMContentLoaded', function () {
     const menuBtn = document.querySelector('.menu-button');
     const navMenuWrapper = document.querySelector('.nav-menu-wrapper');
@@ -412,14 +412,14 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-// Floating Image Animation (GPU Accelerated)
+
 document.addEventListener('DOMContentLoaded', () => {
     const images = document.querySelectorAll(".floating-image");
 
     if (images.length > 0) {
         images.forEach((img, index) => {
             let y = 0;
-            // Alternate direction for a more organic feel
+
             let direction = index % 2 === 0 ? 1 : -1;
 
             function animate() {

@@ -1,4 +1,4 @@
-/* Floating Animation */
+﻿
 @keyframes float {
     0% {
         transform: translateY(0px);
@@ -20,10 +20,10 @@
     animation: float 6s ease-in-out infinite;
 }
 
-/* Layout for Cities Section */
+
 .cities-section {
     background-color: #EDE6D6 !important;
-    /* Richer cream background */
+    
     position: relative;
     overflow: hidden;
     display: flex;
@@ -38,7 +38,7 @@
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    /* Left image, Center content, Right image */
+    
     align-items: center;
     gap: 2rem;
     max-width: 1400px;
@@ -110,7 +110,7 @@
     align-items: center;
 }
 
-/* Responsive considerations */
+
 @media (max-width: 1024px) {
     .cities-layout {
         grid-template-columns: 1fr;
@@ -140,7 +140,7 @@
 
 @media (max-width: 768px) {
 
-    /* Mobile-optimized cities section */
+    
     .cities-section {
         padding: 100px 20px 60px !important;
         min-height: unset !important;
@@ -192,7 +192,7 @@
         animation: float 4s ease-in-out infinite !important;
     }
 
-    /* Hide images on very small screens for cleaner look */
+    
     @media (max-width: 480px) {
 
         .cities-left-image,

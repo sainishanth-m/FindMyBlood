@@ -1,13 +1,13 @@
-/* Command Palette Styles - Refined Minimal & Glassy */
+﻿
 :root {
     --cp-bg: rgba(255, 255, 255, 0.65);
-    /* More transparent */
+    
     --cp-border: rgba(255, 255, 255, 0.4);
     --cp-text: #1F1F1F;
     --cp-text-muted: #666;
-    /* Slightly darker for contrast on glass */
+    
     --cp-hover: rgba(0, 0, 0, 0.05);
-    /* Light gray for hover/selection */
+    
     --cp-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.12), 0 4px 8px -4px rgba(0, 0, 0, 0.04);
     --cp-item-radius: 12px;
     --cp-container-radius: 20px;
@@ -22,13 +22,13 @@
     --cp-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.4);
 }
 
-/* Backdrop */
+
 .cmd-backdrop {
     position: fixed;
     inset: 0;
     background: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(4px);
-    /* Blur the page behind */
+    
     z-index: 9998;
     display: none;
     opacity: 0;
@@ -43,11 +43,11 @@
     opacity: 1;
 }
 
-/* Container */
+
 .cmd-container {
     width: 100%;
     max-width: 480px;
-    /* Reduced width */
+    
     margin: 0 16px;
     position: relative;
     transform: scale(0.98) translateY(4px);
@@ -60,11 +60,11 @@
     opacity: 1;
 }
 
-/* Surface */
+
 .cmd-surface {
     background: var(--cp-bg);
     backdrop-filter: blur(20px);
-    /* Strong blur for glass effect */
+    
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid var(--cp-border);
     border-radius: var(--cp-container-radius);
@@ -74,7 +74,7 @@
     flex-direction: column;
 }
 
-/* Input Wrapper */
+
 .cmd-input-wrapper {
     position: relative;
     border-bottom: 1px solid var(--cp-border);
@@ -102,7 +102,7 @@
     opacity: 0.8;
 }
 
-/* Search Icon */
+
 .cmd-search-icon {
     position: absolute;
     left: 20px;
@@ -114,7 +114,7 @@
     pointer-events: none;
 }
 
-/* ESC Badge */
+
 .cmd-esc {
     position: absolute;
     right: 20px;
@@ -136,7 +136,7 @@
     border-color: rgba(255, 255, 255, 0.05);
 }
 
-/* List */
+
 .cmd-list {
     max-height: 400px;
     overflow-y: auto;
@@ -144,7 +144,7 @@
     scroll-behavior: smooth;
 }
 
-/* Group Heading */
+
 .cmd-group-heading {
     padding: 12px 12px 8px 16px;
     font-size: 11px;
@@ -154,7 +154,7 @@
     letter-spacing: 0.05em;
 }
 
-/* Items */
+
 .cmd-item {
     display: flex;
     align-items: center;
@@ -200,19 +200,19 @@
     color: var(--cp-text);
 }
 
-/* Shortcut Badge */
+
 .cmd-shortcut {
     font-size: 12px;
     color: var(--cp-text-muted);
     background: rgba(0, 0, 0, 0.04);
     width: 24px;
-    /* Fixed width for circle/square look */
+    
     height: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 6px;
-    /* Slightly rounded square like reference */
+    
     font-weight: 500;
 }
 
@@ -220,7 +220,7 @@
     background: rgba(255, 255, 255, 0.1);
 }
 
-/* Divider Line */
+
 .cmd-divider {
     height: 1px;
     background: var(--cp-border);
@@ -228,7 +228,7 @@
     opacity: 0.6;
 }
 
-/* Scrollbar */
+
 .cmd-list::-webkit-scrollbar {
     width: 6px;
 }
@@ -251,7 +251,7 @@
     display: none !important;
 }
 
-/* FAB Styles Preserved */
+
 .fab-container {
     position: fixed;
     bottom: 2.5rem;

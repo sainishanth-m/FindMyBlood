@@ -1,7 +1,7 @@
+﻿
 
-// Mock Data Generators for FindMyBlood
 (function () {
-    //Indian names for donors
+
     const southIndianNames = [
         "Venkatesh Reddy", "Lakshmi Devi", "Srikanth Rao", "Padmavathi K", "Ravi Teja",
         "Anitha Kumari", "Suresh Babu", "Kavitha Reddy", "Ramesh Chandra", "Sunitha Devi",
@@ -28,7 +28,7 @@
     const cities = ["Hyderabad", "Vizag", "Amaravathi", "Khammam", "Vijayawada", "Kurnool", "Guntur"];
     const bloodGroups = ["A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"];
 
-    // Generate 20 donors for each blood group in each city
+
     const generateDonors = () => {
         const donors = [];
         let id = 1;
@@ -47,7 +47,7 @@
                         distance: parseFloat((Math.random() * 25 + 1).toFixed(1)),
                         phone: `+91 ${Math.floor(Math.random() * 9000000000 + 1000000000)}`,
                         city,
-                        isAvailable: Math.random() > 0.2, // 80% available
+                        isAvailable: Math.random() > 0.2,
                         donationCount: Math.floor(Math.random() * 20) + 1,
                         lastDonation: `2024-${String(Math.floor(Math.random() * 12) + 1).padStart(2, '0')}-${String(Math.floor(Math.random() * 28) + 1).padStart(2, '0')}`
                     });
@@ -58,6 +58,6 @@
         return donors;
     };
 
-    // Expose to global scope
+
     window.mockDonors = generateDonors();
 })();
