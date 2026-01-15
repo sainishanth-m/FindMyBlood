@@ -5,24 +5,24 @@
         background: #ffffff;
     }
 
-    
+
     .nav-menu-wrapper {
         display: none !important;
     }
 
-    
+
     .mobile-section {
         display: flex;
         flex-direction: column;
         margin-bottom: 0;
-        
+
     }
 
     .mobile-section:last-child {
         margin-bottom: 80px;
     }
 
-    
+
     .section-media {
         width: 100%;
         height: 48vh;
@@ -40,20 +40,20 @@
         display: block;
     }
 
-    
+
     .section-media:empty {
         display: none;
         height: 0;
         min-height: 0;
     }
 
-    
+
     .hero-video {
         position: relative;
         z-index: 1;
     }
 
-    
+
     .hero-mobile .section-media {
         height: 55vh;
         min-height: 300px;
@@ -68,15 +68,15 @@
         width: 100%;
         height: 100%;
         object-fit: contain;
-        
+
         object-position: center;
     }
 
-    
+
     .section-content {
         background: #ffffff;
         padding: 28px 22px 0;
-        
+
         text-align: center;
     }
 
@@ -96,7 +96,7 @@
         line-height: 1.65;
         color: #4b5563;
         margin-bottom: 0;
-        
+
     }
 
     .section-content .text-block-5 {
@@ -116,18 +116,18 @@
         display: block;
     }
 
-    
+
     .hero-mobile .section-content,
     .hero-content {
         padding: 220px 22px 40px;
-        
+
     }
 
-    
+
     .hero-buttons {
         display: flex;
         flex-direction: row;
-        
+
         gap: 12px;
         justify-content: center;
         margin: 28px 0 20px;
@@ -145,7 +145,7 @@
         font-size: 15px;
         font-weight: 600;
         flex: 1;
-        
+
         text-decoration: none;
         display: inline-block;
         text-align: center;
@@ -163,19 +163,19 @@
         font-size: 15px;
         font-weight: 600;
         flex: 1;
-        
+
         text-decoration: none;
         display: inline-block;
         text-align: center;
         max-width: 180px;
     }
 
-    
+
     section {
         scroll-margin-top: 80px;
     }
 
-    
+
     .mobile-section .section-media,
     .mobile-section .section-content {
         display: flex;
@@ -188,27 +188,27 @@
         display: none !important;
     }
 
-    
+
     .hero-mobile .scroll-down-link,
     .hero-mobile .flex-block-4 {
         display: none;
     }
 
-    
+
     .faq-section {
         margin-bottom: 0 !important;
-        
+
     }
 
-    
+
     .trusted-section {
         padding: 24px 22px;
         background: #f9fafb;
     }
 
-    
 
-    
+
+
     .solution-section,
     #solution,
     .section-solution,
@@ -217,14 +217,14 @@
         padding-bottom: 0 !important;
     }
 
-    
+
     .faq-section,
     #faq {
         margin-top: 0 !important;
         padding-top: 0 !important;
     }
 
-    
+
     .section-media:empty {
         display: none !important;
         height: 0 !important;
@@ -233,17 +233,17 @@
         padding: 0 !important;
     }
 
-    
+
     .w-layout-blockcontainer {
         margin-bottom: 0 !important;
     }
 
-    
+
     .mobile-section {
         margin-bottom: 0 !important;
     }
 
-    
+
     .section {
         padding-bottom: 0 !important;
         margin-bottom: 0 !important;
@@ -253,7 +253,7 @@
         padding-top: 0 !important;
     }
 
-    
+
     .mobile-menu-panel {
         position: fixed;
         top: 70px;
@@ -294,9 +294,9 @@
         border-radius: 8px;
         transition: background 0.2s;
         text-align: center !important;
-        
+
         display: block !important;
-        
+
     }
 
     .menu-links a:hover {
@@ -314,6 +314,38 @@
         font-weight: 600;
         font-size: 15px;
     }
+
+    /* Target second, third, and fourth sections for centered video layout */
+    .mobile-section:nth-of-type(2) .section-media,
+    .mobile-section:nth-of-type(3) .section-media,
+    .mobile-section:nth-of-type(4) .section-media {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 16px;
+        background: #ffffff;
+    }
+
+    .mobile-section:nth-of-type(2) .section-media video,
+    .mobile-section:nth-of-type(3) .section-media video,
+    .mobile-section:nth-of-type(4) .section-media video {
+        width: 100%;
+        max-width: 720px;
+        /* keeps it clean like your design */
+        height: auto;
+        object-fit: contain;
+        border-radius: 12px;
+        /* optional – looks modern */
+    }
+
+    .mobile-section:nth-of-type(2) .section-content,
+    .mobile-section:nth-of-type(3) .section-content,
+    .mobile-section:nth-of-type(4) .section-content {
+        text-align: center;
+        max-width: 680px;
+        margin: 0 auto;
+        padding-top: 28px;
+    }
 }
 
 
@@ -324,7 +356,7 @@
         display: none;
     }
 
-    
+
     .mobile-menu-panel {
         display: none !important;
     }
